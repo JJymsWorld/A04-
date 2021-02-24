@@ -1,0 +1,183 @@
+
+
+#在生成的数据集上进行交叉验证，会发生严重的过拟合行为，因为新生成的样本预测起来非常容易,生成的特征明显弱于原始数据集
+第1个区间进行更新 [0.25 0.5  0.75 1.  ]
+迭代次数为0   gbest  length=25   fitness=0.9282073537156692
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为1   gbest  length=25   fitness=0.9312119452435975
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为2   gbest  length=25   fitness=0.9323851675863479
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为3   gbest  length=25   fitness=0.9341018664811583
+迭代次数为4   gbest  length=25   fitness=0.9341018664811583
+迭代次数为5   gbest  length=25   fitness=0.9341018664811583
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为6   gbest  length=25   fitness=0.9341878212988729
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为7   gbest  length=25   fitness=0.9351319241380937
+迭代次数为8   gbest  length=25   fitness=0.9351319241380937
+迭代次数为9   gbest  length=25   fitness=0.9351319241380937
+迭代次数为10   gbest  length=25   fitness=0.9351319241380937
+第1个区间进行更新 [0.25 0.5  0.75 1.  ]
+迭代次数为11   gbest  length=32   fitness=0.9359617497130909
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为12   gbest  length=32   fitness=0.9359617497130909
+迭代次数为13   gbest  length=32   fitness=0.9359617497130909
+迭代次数为14   gbest  length=32   fitness=0.9359617497130909
+迭代次数为15   gbest  length=32   fitness=0.9359617497130909
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为16   gbest  length=32   fitness=0.9369058918549262
+迭代次数为17   gbest  length=32   fitness=0.9369058918549262
+迭代次数为18   gbest  length=32   fitness=0.9369058918549262
+迭代次数为19   gbest  length=32   fitness=0.9369058918549262
+第1个区间进行更新 [0.25 0.5  0.75 1.  ]
+迭代次数为20   gbest  length=39   fitness=0.9360762971827885
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为21   gbest  length=39   fitness=0.9369919449291767
+迭代次数为22   gbest  length=39   fitness=0.9369919449291767
+迭代次数为23   gbest  length=39   fitness=0.9369919449291767
+迭代次数为24   gbest  length=39   fitness=0.9369919449291767
+第1个区间进行更新 [0.25 0.5  0.75 1.  ]
+迭代次数为25   gbest  length=46   fitness=0.9365055505117201
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为26   gbest  length=46   fitness=0.9377073311166658
+迭代次数为27   gbest  length=46   fitness=0.9377073311166658
+迭代次数为28   gbest  length=46   fitness=0.9377073311166658
+迭代次数为29   gbest  length=46   fitness=0.9377073311166658
+第1个区间进行更新 [0.25 0.5  0.75 1.  ]
+迭代次数为30   gbest  length=53   fitness=0.9373068325630021
+迭代次数为31   gbest  length=53   fitness=0.9373068325630021
+迭代次数为32   gbest  length=53   fitness=0.9373925908676446
+迭代次数为33   gbest  length=53   fitness=0.937592886816331
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为34   gbest  length=53   fitness=0.9381651574462734
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为35   gbest  length=53   fitness=0.9381937795752173
+迭代次数为36   gbest  length=53   fitness=0.9381937795752173
+迭代次数为37   gbest  length=53   fitness=0.9381937795752173
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为38   gbest  length=53   fitness=0.938251058222893
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为39   gbest  length=53   fitness=0.938336850917323
+迭代次数为40   gbest  length=53   fitness=0.938336850917323
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为41   gbest  length=53   fitness=0.9385657837334339
+迭代次数为42   gbest  length=53   fitness=0.9385657837334339
+迭代次数为43   gbest  length=53   fitness=0.9385657837334339
+迭代次数为44   gbest  length=53   fitness=0.9385657837334339
+第1个区间进行更新 [0.25 0.5  0.75 1.  ]
+迭代次数为45   gbest  length=60   fitness=0.9386230181656684
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为46   gbest  length=60   fitness=0.9386230181656684
+迭代次数为47   gbest  length=60   fitness=0.9386230181656684
+迭代次数为48   gbest  length=60   fitness=0.9386230181656684
+迭代次数为49   gbest  length=60   fitness=0.9386230181656684
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为50   gbest  length=60   fitness=0.9389377092864217
+迭代次数为51   gbest  length=60   fitness=0.9389377092864217
+迭代次数为52   gbest  length=60   fitness=0.9389377092864217
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为53   gbest  length=60   fitness=0.939052119196969
+迭代次数为54   gbest  length=60   fitness=0.939052119196969
+迭代次数为55   gbest  length=60   fitness=0.939052119196969
+迭代次数为56   gbest  length=60   fitness=0.939052119196969
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为57   gbest  length=60   fitness=0.9391379217170526
+迭代次数为58   gbest  length=60   fitness=0.9391379217170526
+迭代次数为59   gbest  length=60   fitness=0.9391379217170526
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为60   gbest  length=60   fitness=0.9392811109670015
+迭代次数为61   gbest  length=60   fitness=0.9392811109670015
+迭代次数为62   gbest  length=60   fitness=0.9392811109670015
+迭代次数为63   gbest  length=60   fitness=0.9392811109670015
+第1个区间进行更新 [0.25 0.5  0.75 1.  ]
+迭代次数为64   gbest  length=67   fitness=0.9384799320850822
+迭代次数为65   gbest  length=67   fitness=0.9384799320850822
+迭代次数为66   gbest  length=67   fitness=0.938823191293685
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为67   gbest  length=67   fitness=0.9396816881258941
+迭代次数为68   gbest  length=67   fitness=0.9396816881258941
+迭代次数为69   gbest  length=67   fitness=0.9396816881258941
+迭代次数为70   gbest  length=67   fitness=0.9396816881258941
+best更新成功！！！！！！！！！！！！！！！
+迭代次数为71   gbest  length=67   fitness=0.9402539243660488
+迭代次数为72   gbest  length=67   fitness=0.9402539243660488
+迭代次数为73   gbest  length=67   fitness=0.9402539243660488
+迭代次数为74   gbest  length=67   fitness=0.9402539243660488
+第1个区间进行更新 [0.25 0.5  0.75 1.  ]
+迭代次数为75   gbest  length=74   fitness=0.9397961619031898
+迭代次数为76   gbest  length=74   fitness=0.9397961619031898
+迭代次数为77   gbest  length=74   fitness=0.9397961619031898
+迭代次数为78   gbest  length=74   fitness=0.9397961619031898
+迭代次数为79   gbest  length=74   fitness=0.9397961619031898
+迭代次数为80   gbest  length=74   fitness=0.9397961619031898
+迭代次数为81   gbest  length=74   fitness=0.9397961619031898
+迭代次数为82   gbest  length=74   fitness=0.9397961619031898
+迭代次数为83   gbest  length=74   fitness=0.9397961619031898
+迭代次数为84   gbest  length=74   fitness=0.9397961619031898
+撤回原来的操作，更新走向下一个区块，返还之前的迭代次数,重新进行count次数计算
+第2个区间进行更新 [0.25 0.5  0.75 1.  ]
+迭代次数为75   gbest  length=74   fitness=0.9386515420380764
+迭代次数为76   gbest  length=74   fitness=0.9396243800012577
+迭代次数为77   gbest  length=74   fitness=0.9396243800012577
+迭代次数为78   gbest  length=74   fitness=0.9396243800012577
+迭代次数为79   gbest  length=74   fitness=0.9396244389551792
+迭代次数为80   gbest  length=74   fitness=0.9397675495998993
+迭代次数为81   gbest  length=74   fitness=0.9397675495998993
+迭代次数为82   gbest  length=74   fitness=0.9397675495998993
+迭代次数为83   gbest  length=74   fitness=0.9397675495998993
+迭代次数为84   gbest  length=74   fitness=0.9397675495998993
+迭代次数为85   gbest  length=74   fitness=0.9397675495998993
+迭代次数为86   gbest  length=74   fitness=0.9399105963778709
+迭代次数为87   gbest  length=74   fitness=0.9399105963778709
+迭代次数为88   gbest  length=74   fitness=0.9399105963778709
+迭代次数为89   gbest  length=74   fitness=0.9399105963778709
+迭代次数为90   gbest  length=74   fitness=0.9399105963778709
+迭代次数为91   gbest  length=74   fitness=0.9399105963778709
+迭代次数为92   gbest  length=74   fitness=0.9399105963778709
+迭代次数为93   gbest  length=74   fitness=0.9399105963778709
+迭代次数为94   gbest  length=74   fitness=0.9399105963778709
+迭代次数为95   gbest  length=74   fitness=0.9399105963778709
+迭代次数为96   gbest  length=74   fitness=0.9399105963778709
+迭代次数为97   gbest  length=74   fitness=0.9399105963778709
+迭代次数为98   gbest  length=74   fitness=0.9399105963778709
+迭代次数为99   gbest  length=74   fitness=0.9399105963778709
+得到的特征子集序列为 [3, 132, 5, 6, 263, 392, 9, 264, 271, 149, 150, 154, 156, 33, 294, 295, 169, 298, 427, 174, 175, 176, 177, 179, 181, 182, 56, 58, 315, 60, 61, 62, 63, 320, 319, 67, 201, 73, 206, 348, 349, 226, 228, 231, 232, 363, 620, 621, 622, 623, 372, 629, 630, 632, 382]
+得到的特征子集为
+得到的特征子集为 ['seg_cabin' 'prebuy_i_cnt_y3_d30' 'pax_tax' 'gender' 'dist_cnt_y3'
+ 'tkt_avg_amt_y2' 'nation_name' 'flt_nature_cnt_y1' 'avg_dist_cnt_y3'
+ 'pref_orig_y2_1' 'pref_orig_y2_2' 'pref_orig_y3_1' 'pref_orig_y3_3'
+ 'cabin_y_cnt_y3' 'dist_i_cnt_y2' 'dist_i_cnt_y3' 'pref_line_y1_1'
+ 'dist_all_cnt_y1' 'mdl_mcv' 'pref_line_y2_1' 'pref_line_y2_2'
+ 'pref_line_y2_3' 'pref_line_y2_4' 'pref_line_y3_1' 'pref_line_y3_3'
+ 'pref_line_y3_4' 'pref_aircraft_y2_3' 'pref_aircraft_y2_5'
+ 'flt_leg_cnt_y3' 'pref_aircraft_y3_2' 'pref_aircraft_y3_3'
+ 'pref_aircraft_y3_4' 'pref_aircraft_y3_5' 'flt_leg_i_cnt_y3'
+ 'flt_leg_i_cnt_y2' 'seat_window_cnt_y2' 'pref_city_y2_3'
+ 'seat_walkway_cnt_y3' 'pref_city_y3_3' 'pref_orig_city_y2'
+ 'pref_orig_city_y3' 'pref_month_y2_3' 'pref_month_y2_5' 'pref_month_y3_3'
+ 'pref_month_y3_4' 'flt_bag_cnt_y3' 'seg_dep_time_month'
+ 'seg_dep_time_year' 'seg_dep_time_hour' 'seg_dep_time_is_workday'
+ 'tkt_3y_amt' 'recent_flt_day_is_workday' 'recent_flt_day_is_holiday'
+ 'last_flt_day' 'tkt_i_amt_y2']
+
+特征子集长度为 55
+
+#训练集与测试集统一做BOX_COX转换，编码与归一化操作
+#之后训练集切分为8,2折
+#对8折训练集使用SMOTE+Tomek算法生成新样本，并在此数据集进行特征选择
+#在2折验证集上验证特征选择结果
+
+评估方式：采用不平衡数据集
+balanced_accuracy_score= 0.6359586767929363
+f1= 0.30670926517571884
+precision_score= 0.29003021148036257
+recall_score= 0.3254237288135593
+auc= 0.6359586767929363
+
+评估方式：采用平衡数据集
+balanced_accuracy_score= 0.6245241733814948
+f1= 0.28129829984544047
+precision_score= 0.2585227272727273
+recall_score= 0.30847457627118646
+auc= 0.6245241733814948
