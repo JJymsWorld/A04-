@@ -36,6 +36,3 @@ def calc_condition_ent(x, y):
     return ent
 
 
-from passenger_identify.base import reduce_mem_usage, read_csv, datapath, drop_features, discrete_list, tmppath, \
-    Box_Cox, train_drop_features, getTrainTest
-

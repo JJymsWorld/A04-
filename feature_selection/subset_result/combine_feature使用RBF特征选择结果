@@ -1,0 +1,88 @@
+C:\Users\32122\Anaconda3\envs\pytorch\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.3\helpers\pydev\pydevconsole.py" --mode=client --port=12570
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['C:\\Users\\32122\\PycharmProjects\\untitled1', 'C:/Users/32122/PycharmProjects/untitled1'])
+Python 3.6.10 (default, Mar  5 2020, 10:17:47) [MSC v.1900 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.16.1 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.16.1
+Python 3.6.10 (default, Mar  5 2020, 10:17:47) [MSC v.1900 64 bit (AMD64)] on win32
+runfile('C:/Users/32122/PycharmProjects/untitled1/passenger_identify/feature_selection/compare.py', wdir='C:/Users/32122/PycharmProjects/untitled1/passenger_identify/feature_selection')
+Memory usage after optimization is: 139.96 MB
+Decreased by 74.6%
+Memory usage after optimization is: 40.44 MB
+Decreased by 74.6%
+C:\Users\32122\Anaconda3\envs\pytorch\lib\site-packages\category_encoders\utils.py:21: FutureWarning: is_categorical is deprecated and will be removed in a future version.  Use is_categorical_dtype instead
+  elif pd.api.types.is_categorical(cols):
+#######################################50#########################################
+RBF
+进入评估函数
+balanced_accuracy_score= 0.6626474174925134
+f1= 0.3583061889250814
+precision_score= 0.3448275862068966
+recall_score= 0.3728813559322034
+auc= 0.6626474174925133
+#######################################100#########################################
+RBF
+进入评估函数
+balanced_accuracy_score= 0.6756375227686704
+f1= 0.3763955342902711
+precision_score= 0.35542168674698793
+recall_score= 0.4
+auc= 0.6756375227686703
+#######################################150#########################################
+RBF
+进入评估函数
+balanced_accuracy_score= 0.6780027631132104
+f1= 0.37617554858934166
+precision_score= 0.3498542274052478
+recall_score= 0.4067796610169492
+auc= 0.6780027631132104
+#######################################250#########################################
+RBF
+进入评估函数
+balanced_accuracy_score= 0.6819618103794264
+f1= 0.384251968503937
+precision_score= 0.3588235294117647
+recall_score= 0.4135593220338983
+auc= 0.6819618103794264
+Process finished with exit code 0
+
+
+
+训练数据特征筛选维度后 (4687, 411)
+进入评估函数
+balanced_accuracy_score= 0.6648988144855053
+f1= 0.35782747603833864
+precision_score= 0.338368580060423
+recall_score= 0.37966101694915255
+auc= 0.6648988144855053
+Select from model
+(18745, 412)
+进入评估函数
+balanced_accuracy_score= 0.673942607514433
+f1= 0.3738019169329074
+precision_score= 0.35347432024169184
+recall_score= 0.39661016949152544
+auc= 0.673942607514433
+#######################################200#########################################
+SELECT K BEST
+进入评估函数
+balanced_accuracy_score= 0.6300897625883733
+f1= 0.2996742671009772
+precision_score= 0.2884012539184953
+recall_score= 0.31186440677966104
+auc= 0.6300897625883733
+pca
+进入评估函数
+balanced_accuracy_score= 0.6017053348152265
+f1= 0.22395833333333334
+precision_score= 0.18181818181818182
+recall_score= 0.29152542372881357
+auc= 0.6017053348152265
+RBF
+进入评估函数
+balanced_accuracy_score= 0.6821894970825229
+f1= 0.38546603475513425
+precision_score= 0.3609467455621302
+recall_score= 0.4135593220338983
+auc= 0.6821894970825227

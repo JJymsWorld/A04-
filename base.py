@@ -1,15 +1,10 @@
 # 定义全局函数便于直接调用处理
-from collections import Counter
 from datetime import datetime
 
-import pandas as pd
 import numpy as np
-from datetime import date
-import datetime as dt
-import seaborn as sns
-import matplotlib.pyplot as plt
-from scipy.stats import boxcox
+import pandas as pd
 from chinese_calendar import is_in_lieu, is_holiday, is_workday
+from scipy.stats import boxcox
 
 ############全局参数#################################
 discrete_list = ['pax_name_passport', 'seg_route_from', 'seg_route_to', 'seg_flight', 'seg_cabin',
@@ -57,7 +52,7 @@ func_dict = {'add': lambda x, y: x + y,
              "mins": lambda x, y: x - y,
              'div': lambda x, y: x / (y + epsilon),
              'multi': lambda x, y: x + y}
-func_list = ['mean', 'median', 'min', 'max', 'std', 'var', 'mode']
+func_list = ['mean', 'median', 'min', 'max', 'std', 'var']
 drop_features = ['emd_lable', 'cabin_hf_cnt_m3', 'cabin_hf_cnt_m6', 'complain_valid_cnt_m3', 'complain_valid_cnt_m6',
                  'bag_cnt_m6',
                  'bag_cnt_y1', 'bag_cnt_y2', 'bag_cnt_y3', 'flt_cancel_cnt_y3', 'cabin_fall_cnt_y3', 'complain_cnt_m3',
@@ -117,7 +112,6 @@ def reduce_mem_usage(df, verbose=True):
 
 
 def evaluation(x_train, x_test, y_train, y_test, str):
-    from sklearn.neighbors import KNeighborsClassifier
     from sklearn.naive_bayes import GaussianNB
     from sklearn.tree import DecisionTreeClassifier
     from sklearn.svm import SVC
@@ -261,6 +255,20 @@ def getTrainTest(X, Y):
     return x_train, x_test, y_train, y_test
 
 
+def getTrainTest_np(X, Y):
+    global x_train, x_test, y_train, y_test
+    # 会员编号等，等下仔细去查看所有取值数量超过100的特征
+    from sklearn.model_selection import StratifiedKFold
+    kfold = StratifiedKFold(n_splits=5, random_state=0, shuffle=True)
+    for train_index, test_index in kfold.split(X, Y):
+        x_train = X[train_index]
+        x_test = X[test_index]
+        y_train = Y[train_index]
+        y_test = Y[test_index]
+        break
+    return x_train, x_test, y_train, y_test
+
+
 def minmax_target(X_train, X_test, Y_train, continue_list, discrete_list):
     import category_encoders as ce
     from sklearn.preprocessing import MinMaxScaler
@@ -321,12 +329,166 @@ def combine_feature(train, test, discrete_list, continue_list):
                 print(col_func_features)
     for col_i in discrete_list:
         for col_j in discrete_list:
-            col_func_features = '_'.join([col_j, 'freq', col_i])
-            data[col_func_features] = data[col_j].groupby(data[col_i]).transform('freq')
+            col_func_features = '_'.join([col_j, 'count', col_i])
+            data[col_func_features] = data[col_j].groupby(data[col_i]).transform('count')
             print(col_func_features)
-    data[0:23432].to_csv(tmppath + 'combine_feature_' + 'train.csv', index=False)
-    data[23432:].to_csv(tmppath + 'combine_feature_' + 'test.csv+', index=False)
     return data[0:23432], data[23432:]
+
+
+import xgboost
+import lightgbm
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier, \
+    ExtraTreesClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import log_loss
+from sklearn.naive_bayes import GaussianNB
+
+
+def stacking_clf(clf, train_x, train_y, test_x, clf_name, kf, label_split=None, folds=5):
+    train = np.zeros((train_x.shape[0], 1))
+    test = np.zeros((test_x.shape[0], 1))
+    test_pre = np.empty((folds, test_x.shape[0], 1))
+    cv_scores = []
+    for i, (train_index, test_index) in enumerate(kf.split(train_x, label_split)):
+        tr_x = train_x[train_index]
+        tr_y = train_y[train_index]
+        te_x = train_x[test_index]
+        te_y = train_y[test_index]
+
+        if clf_name in ["rf", "ada", "gb", "et", "lr", "knn", "gnb"]:
+            clf.fit(tr_x, tr_y)
+            pre = clf.predict_proba(te_x)
+
+            train[test_index] = pre[:, 0].reshape(-1, 1)
+            test_pre[i, :] = clf.predict_proba(test_x)[:, 0].reshape(-1, 1)
+
+            cv_scores.append(log_loss(te_y, pre[:, 0].reshape(-1, 1)))
+        elif clf_name in ["xgb"]:
+            train_matrix = clf.DMatrix(tr_x, label=tr_y, missing=-1)
+            test_matrix = clf.DMatrix(te_x, label=te_y, missing=-1)
+            z = clf.DMatrix(test_x)
+            params = {'booster': 'gbtree',
+                      'objective': 'multi:softprob',
+                      'eval_metric': 'mlogloss',
+                      'gamma': 1,
+                      'min_child_weight': 1.5,
+                      'max_depth': 5,
+                      'lambda': 10,
+                      'subsample': 0.7,
+                      'colsample_bytree': 0.7,
+                      'colsample_bylevel': 0.7,
+                      'eta': 0.03,
+                      'tree_method': 'exact',
+                      'seed': 2017,
+                      "num_class": 2
+                      }
+
+            num_round = 10000
+            early_stopping_rounds = 100
+            watchlist = [(train_matrix, 'train'),
+                         (test_matrix, 'eval')
+                         ]
+            if test_matrix:
+                model = clf.train(params, train_matrix, num_boost_round=num_round, evals=watchlist,
+                                  early_stopping_rounds=early_stopping_rounds
+                                  )
+                pre = model.predict(test_matrix, ntree_limit=model.best_ntree_limit)
+                train[test_index] = pre[:, 0].reshape(-1, 1)
+                test_pre[i, :] = model.predict(z, ntree_limit=model.best_ntree_limit)[:, 0].reshape(-1, 1)
+                cv_scores.append(log_loss(te_y, pre[:, 0].reshape(-1, 1)))
+        elif clf_name in ["lgb"]:
+            train_matrix = clf.Dataset(tr_x, label=tr_y)
+            test_matrix = clf.Dataset(te_x, label=te_y)
+            params = {
+                'boosting_type': 'gbdt',
+                # 'boosting_type': 'dart',
+                'objective': 'multiclass',
+                'metric': 'multi_logloss',
+                'min_child_weight': 1.5,
+                'num_leaves': 2 ** 5,
+                'lambda_l2': 10,
+                'subsample': 0.7,
+                'colsample_bytree': 0.7,
+                'colsample_bylevel': 0.7,
+                'learning_rate': 0.03,
+                'tree_method': 'exact',
+                'seed': 2017,
+                "num_class": 2,
+                'silent': True,
+            }
+            num_round = 10000
+            early_stopping_rounds = 100
+            if test_matrix:
+                model = clf.train(params, train_matrix, num_round, valid_sets=test_matrix,
+                                  early_stopping_rounds=early_stopping_rounds
+                                  )
+                pre = model.predict(te_x, num_iteration=model.best_iteration)
+                train[test_index] = pre[:, 0].reshape(-1, 1)
+                test_pre[i, :] = model.predict(test_x, num_iteration=model.best_iteration)[:, 0].reshape(-1, 1)
+                cv_scores.append(log_loss(te_y, pre[:, 0].reshape(-1, 1)))
+        else:
+            raise IOError("Please add new clf.")
+        print("%s now score is:" % clf_name, cv_scores)
+    test[:] = test_pre.mean(axis=0)
+    print("%s_score_list:" % clf_name, cv_scores)
+    print("%s_score_mean:" % clf_name, np.mean(cv_scores))
+    return train.reshape(-1, 1), test.reshape(-1, 1)
+
+
+def rf_clf(x_train, y_train, x_valid, kf, label_split=None):
+    randomforest = RandomForestClassifier(n_estimators=1200, max_depth=20, n_jobs=-1, random_state=2017,
+                                          max_features="auto", verbose=1)
+    rf_train, rf_test = stacking_clf(randomforest, x_train, y_train, x_valid, "rf", kf, label_split=label_split)
+    return rf_train, rf_test, "rf"
+
+
+def ada_clf(x_train, y_train, x_valid, kf, label_split=None):
+    adaboost = AdaBoostClassifier(n_estimators=50, random_state=2017, learning_rate=0.01)
+    ada_train, ada_test = stacking_clf(adaboost, x_train, y_train, x_valid, "ada", kf, label_split=label_split)
+    return ada_train, ada_test, "ada"
+
+
+def gb_clf(x_train, y_train, x_valid, kf, label_split=None):
+    gbdt = GradientBoostingClassifier(learning_rate=0.04, n_estimators=100, subsample=0.8, random_state=2017,
+                                      max_depth=5, verbose=1)
+    gbdt_train, gbdt_test = stacking_clf(gbdt, x_train, y_train, x_valid, "gb", kf, label_split=label_split)
+    return gbdt_train, gbdt_test, "gb"
+
+
+def et_clf(x_train, y_train, x_valid, kf, label_split=None):
+    extratree = ExtraTreesClassifier(n_estimators=1200, max_depth=35, max_features="auto", n_jobs=-1, random_state=2017,
+                                     verbose=1)
+    et_train, et_test = stacking_clf(extratree, x_train, y_train, x_valid, "et", kf, label_split=label_split)
+    return et_train, et_test, "et"
+
+
+def xgb_clf(x_train, y_train, x_valid, kf, label_split=None):
+    xgb_train, xgb_test = stacking_clf(xgboost, x_train, y_train, x_valid, "xgb", kf, label_split=label_split)
+    return xgb_train, xgb_test, "xgb"
+
+
+def lgb_clf(x_train, y_train, x_valid, kf, label_split=None):
+    xgb_train, xgb_test = stacking_clf(lightgbm, x_train, y_train, x_valid, "lgb", kf, label_split=label_split)
+    return xgb_train, xgb_test, "lgb"
+
+
+def gnb_clf(x_train, y_train, x_valid, kf, label_split=None):
+    gnb = GaussianNB()
+    gnb_train, gnb_test = stacking_clf(gnb, x_train, y_train, x_valid, "gnb", kf, label_split=label_split)
+    return gnb_train, gnb_test, "gnb"
+
+
+def lr_clf(x_train, y_train, x_valid, kf, label_split=None):
+    logisticregression = LogisticRegression(n_jobs=-1, random_state=2017, C=0.1, max_iter=200)
+    lr_train, lr_test = stacking_clf(logisticregression, x_train, y_train, x_valid, "lr", kf, label_split=label_split)
+    return lr_train, lr_test, "lr"
+
+
+def knn_clf(x_train, y_train, x_valid, kf, label_split=None):
+    kneighbors = KNeighborsClassifier(n_neighbors=200, n_jobs=-1)
+    knn_train, knn_test = stacking_clf(kneighbors, x_train, y_train, x_valid, "lr", kf, label_split=label_split)
+    return knn_train, knn_test, "knn"
 
 # train = reduce_mem_usage(read_csv(tmppath + "date_train.csv")).drop(drop_features, axis=1).drop(['emd_lable2'],
 #                                                                                                 axis=1).drop(

@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.feature_selection import RFE
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.feature_selection import SelectKBest
-from passenger_identify.base import reduce_mem_usage, read_csv, datapath, drop_features, discrete_list, tmppath, \
+from passenger_identify.base import reduce_mem_usage, read_csv, datapath, drop_features, tmppath, \
     Box_Cox, train_drop_features, getTrainTest, minmax_target
 
 
@@ -25,46 +25,37 @@ def evaluation_tree(x_train, x_test, y_train, y_test):
     return
 
 
-train = reduce_mem_usage(read_csv(tmppath + "BOX_train.csv"))
-test = reduce_mem_usage(read_csv(tmppath + 'BOX_test.csv'))
+train = reduce_mem_usage(read_csv(tmppath + 'sub/combine_feature_train.csv'))
+test = reduce_mem_usage(read_csv(tmppath + 'sub/combine_feature_test.csv'))
 
-X_train = train.drop(['emd_lable2'], axis=1).drop(train_drop_features, axis=1)  # 去除部分取值过多的离散型特征
-X_test = test.drop(['emd_lable2'], axis=1).drop(train_drop_features, axis=1)
+X_train = train.drop(['emd_lable2'], axis=1)  # 去除部分取值过多的离散型特征
 Y_train = train['emd_lable2'].astype(int)
 
-discrete_list = list(set(discrete_list) - set(train_drop_features))  # 训练中需要剔除的特征都是离散型的特征
+discrete_list = ['seg_flight', 'seg_cabin', 'pref_orig_m6_2', 'pref_line_y1_2',
+                 'pref_line_y1_3', 'pref_line_y2_2', 'pref_line_y2_3', 'pref_line_y3_3'
+    , 'pref_line_y3_4', 'pref_line_y3_5', 'pref_aircraft_y3_3', 'pref_city_y1_2',
+                 'pref_city_y3_4', 'pref_dest_city_m6', 'pref_dest_city_y3'
+    , 'pref_month_y3_1', 'seg_dep_time_month']  # 训练中需要剔除的特征都是离散型的特征
 feature_list = X_train.columns.tolist()
 continue_list = list(set(feature_list) - set(discrete_list))
 
-# 训练与测试数据集进行归一化与编码
-X_train, X_test = minmax_target(X_train, X_test, Y_train, continue_list, discrete_list)
-# 训练集交叉验证！
-x_train, x_test, y_train, y_test = getTrainTest(X_train, Y_train)
+X_train, test = minmax_target(X_train, test, Y_train, continue_list, discrete_list)  # 离散值编码与连续特征归一化
 
-from minepy import MINE
+del train
+# 标注：我已经把之前特征选择的结果全部剔除这一部分的特征选择了
+x_train, x_test, y_train, y_test = getTrainTest(X_train, Y_train)  # 线下验证，80%训练集，20%验证集
 
+count_list = [50, 100, 150, 250]
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.feature_selection import SelectFromModel
 
-def mic(x, y):
-    m = MINE()
-    m.compute_score(x, y)
-    return (m.mic(), 0.5)
+clf = ExtraTreesClassifier(n_estimators=50)
+clf = clf.fit(x_train, y_train)
 
-
-skb = SelectKBest(
-    lambda X, Y: np.array(list(map(lambda x: mic(x, Y), X.T))).T[0],
-    k=50)
-X_train_1 = skb.fit_transform(x_train, y_train)
-X_test_1 = skb.transform(x_test)
-print('SELECT K BEST')
-evaluation_tree(X_train_1, X_test_1, y_train, y_test)
-
-# RBF递归消除特征法
-
-rbf = RFE(estimator=DecisionTreeClassifier(),
-          n_features_to_select=50)
-X_train_1 = rbf.fit_transform(x_train, y_train)
-X_test_1 = rbf.transform(x_test)
-print('RBF                          ')
+model = SelectFromModel(clf, prefit=True)
+X_train_1 = model.transform(x_train)
+X_test_1 = model.transform(x_test)
+print('训练数据特征筛选维度后', X_test_1.shape)
 evaluation_tree(X_train_1, X_test_1, y_train, y_test)
 
 # 基于树模型的特征选择法
@@ -78,22 +69,39 @@ print('Select from model')
 print(X_train_1.shape)
 evaluation_tree(X_train_1, X_test_1, y_train, y_test)
 
-from sklearn.decomposition import PCA
+for count in count_list:
+    from minepy import MINE
 
-pca = PCA(n_components=50)
-X_train_1 = pca.fit_transform(x_train)
-X_test_1 = pca.transform(x_test)
-print('pca                         ')
-evaluation_tree(X_train_1, X_test_1, y_train, y_test)
+    print("#######################################" + str(count) + "#########################################")
 
-from sklearn.ensemble import ExtraTreesClassifier
-from sklearn.feature_selection import SelectFromModel
 
-clf = ExtraTreesClassifier(n_estimators=50)
-clf = clf.fit(x_train, y_train)
+    def mic(x, y):
+        m = MINE()
+        m.compute_score(x, y)
+        return (m.mic(), 0.5)
 
-model = SelectFromModel(clf, prefit=True)
-X_train_1 = model.transform(x_train)
-X_test_1 = model.transform(x_test)
-print('训练数据特征筛选维度后', X_test_1.shape)
-evaluation_tree(X_train_1, X_test_1, y_train, y_test)
+
+    # skb = SelectKBest(
+    #     lambda X, Y: np.array(list(map(lambda x: mic(x, Y), X.T))).T[0],
+    #     k=count)
+    # X_train_1 = skb.fit_transform(x_train, y_train)
+    # X_test_1 = skb.transform(x_test)
+    # print('SELECT K BEST')
+    # evaluation_tree(X_train_1, X_test_1, y_train, y_test)
+    #
+    # from sklearn.decomposition import PCA
+    #
+    # pca = PCA(n_components=count)
+    # X_train_1 = pca.fit_transform(x_train)
+    # X_test_1 = pca.transform(x_test)
+    # print('pca                         ')
+    # evaluation_tree(X_train_1, X_test_1, y_train, y_test)
+
+    # RBF递归消除特征法
+
+    rbf = RFE(estimator=DecisionTreeClassifier(),
+              n_features_to_select=count)
+    X_train_1 = rbf.fit_transform(x_train, y_train)
+    X_test_1 = rbf.transform(x_test)
+    print('RBF                          ')
+    evaluation_tree(X_train_1, X_test_1, y_train, y_test)

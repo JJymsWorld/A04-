@@ -20,8 +20,9 @@ class Data:
 
     def __init__(self, x_train, y_train):
         # Extract the no of features
-        self.noOfFeatures = x_train.shape[1]
-        self._X_train = x_train.to_numpy()
+
+        self._X_train = x_train.to_numpy()[:, 43:]
+        self.noOfFeatures = self._X_train.shape[1]
         self._Y_train = y_train.to_numpy()
         self.train_test = getTrainTest(self._X_train, self._Y_train)
 
@@ -46,10 +47,9 @@ class Test_Data:
 
     def __init__(self, x_train, x_test, y_train, y_test):
         # Extract the no of features
-        self.noOfFeatures = x_train.shape[1]
-
-        self._X_train = x_train.to_numpy()
-        self._X_test = x_test.to_numpy()
+        self._X_train = x_train.to_numpy()[:, 43:]
+        self._X_test = x_test.to_numpy()[:, 43:]
+        self.noOfFeatures = self._X_train.shape[1]
         self._Y_train = y_train.to_numpy()
         self._Y_test = y_test.to_numpy()
 
