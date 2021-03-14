@@ -7,7 +7,7 @@ from sklearn import metrics
 
 
 def getTrainTest(_X_train, _Y_train):
-    kfold = StratifiedKFold(n_splits=3, shuffle=True, random_state=0)
+    kfold = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
     train_test = []
     for train_index, test_index in kfold.split(_X_train, _Y_train):
         train_test.append([train_index, test_index])
@@ -21,7 +21,7 @@ class Data:
     def __init__(self, x_train, y_train):
         # Extract the no of features
 
-        self._X_train = x_train.to_numpy()[:, 43:]
+        self._X_train = x_train.to_numpy()
         self.noOfFeatures = self._X_train.shape[1]
         self._Y_train = y_train.to_numpy()
         self.train_test = getTrainTest(self._X_train, self._Y_train)
@@ -34,7 +34,7 @@ class Data:
             x_test = self._X_train[test_index]
             dTree.fit(x_train[:, features], self._Y_train[train_index])
             y_pred = dTree.predict(x_test[:, features])
-            acc.append(metrics.roc_auc_score(y_true=self._Y_train[test_index], y_score=y_pred))
+            acc.append(metrics.f1_score(y_true=self._Y_train[test_index], y_pred=y_pred))
         return np.mean(acc)
 
     def getDimension(self):
@@ -47,8 +47,8 @@ class Test_Data:
 
     def __init__(self, x_train, x_test, y_train, y_test):
         # Extract the no of features
-        self._X_train = x_train.to_numpy()[:, 43:]
-        self._X_test = x_test.to_numpy()[:, 43:]
+        self._X_train = x_train.to_numpy()
+        self._X_test = x_test.to_numpy()
         self.noOfFeatures = self._X_train.shape[1]
         self._Y_train = y_train.to_numpy()
         self._Y_test = y_test.to_numpy()

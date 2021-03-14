@@ -23,7 +23,7 @@ discrete_list = ['seg_flight', 'seg_cabin', 'pref_orig_m6_2', 'pref_line_y1_2',
                  'pref_line_y1_3', 'pref_line_y2_2', 'pref_line_y2_3', 'pref_line_y3_3'
     , 'pref_line_y3_4', 'pref_line_y3_5', 'pref_aircraft_y3_3', 'pref_city_y1_2',
                  'pref_city_y3_4', 'pref_dest_city_m6', 'pref_dest_city_y3'
-    , 'pref_month_y3_1', 'seg_dep_time_month']  # 训练中需要剔除的特征都是离散型的特征
+    , 'pref_month_y3_1', 'seg_dep_time_month']  #
 feature_list = X_train.columns.tolist()
 continue_list = list(set(feature_list) - set(discrete_list))
 
@@ -36,7 +36,6 @@ x_train, x_test, y_train, y_test = getTrainTest_np(X_train, Y_train)  # 线下�
 
 evaluation(x_train, x_test, y_train, y_test, 'temp')
 
-from sklearn.model_selection import cross_val_score
 
 # 创建新的特征并对比结果,暂时不用，特征数量非常多，对树类模型可能存在一定的效果
 # X_train, X_test = auto_feature_make(X_train, test, continue_list)
