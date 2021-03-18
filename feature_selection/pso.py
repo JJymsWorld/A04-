@@ -11,7 +11,7 @@ from sklearn.model_selection import StratifiedKFold, GridSearchCV
 from passenger_identify.feature_selection.Fitness import Data, Test_Data
 from passenger_identify.feature_selection.Partical import Particle
 from passenger_identify.base import reduce_mem_usage, read_csv, datapath, drop_features, discrete_list, tmppath, \
-    Box_Cox, train_drop_features, getTrainTest, minmax_target, target, minmax, getTrainTest_np
+    Box_Cox, train_drop_features, getTrainTest, minmax_target, target, minmax, getTrainTest_np, feature_subset_list
 from imblearn.combine import SMOTEENN, SMOTETomek
 
 
@@ -116,7 +116,7 @@ class PSO:
 
     def RWS(self, mic_feature_list, size):
         # 权重与对应的选择长度
-        constant = np.array([j for j in range(1, 9)]) / 8
+        constant = np.array([j for j in range(1, 5)]) / 4
         print('第{0}个区间进行更新'.format(self.choose + 1), constant)
         sub_mic_feature_list = mic_feature_list[:int(constant[self.choose] * len(mic_feature_list))]
         P_MIC = sub_mic_feature_list[:, 0]
@@ -223,7 +223,7 @@ class PSO:
 
     def back(self):
         print("撤回原来的操作，更新走向下一个区块，返还之前的迭代次数,重新进行count次数计算")
-        if self.choose == 7:
+        if self.choose == 3:
             self.choose = -1
             return
         else:
@@ -234,165 +234,7 @@ class PSO:
         return
 
 
-feature_subset_list = [['dist_cnt_y3', 'tkt_all_amt_y2', 'select_seat_cnt_y3',
-                        'pref_line_y3_4', 'tkt_all_amt_y2', 'dist_d_cnt_y3',
-                        'pref_line_y3_5', 'tkt_all_amt_y3', 'pref_line_y2_3',
-                        'tkt_i_amt_y1', 'tkt_3y_amt', 'flt_delay_time_y1', 'seg_flight',
-                        'tkt_avg_amt_y1', 'pax_tax', 'dist_all_cnt_y2', 'pax_tax',
-                        'seg_cabin', 'pax_fcny', 'pref_city_y3_3', 'tkt_i_amt_y1',
-                        'select_seat_cnt_y3', 'flt_delay_time_y2', 'pref_line_y2_2',
-                        'pref_line_y3_4', 'pref_line_y2_1', 'dist_all_cnt_y3',
-                        'dist_cnt_y1', 'tkt_avg_amt_y3', 'tkt_avg_amt_y2', 'tkt_i_amt_y1',
-                        'seg_cabin', 'pref_line_y3_2', 'pref_line_y3_4',
-                        'select_seat_cnt_y2', 'dist_i_cnt_y2', 'pref_line_y2_2',
-                        'seg_flight', 'pax_tax', 'tkt_d_amt_y3', 'tkt_i_amt_y3',
-                        'pref_line_y3_1', 'dist_i_cnt_y3'],
-                       ['pit_add_air_amt_y3', 'tkt_all_amt_y3', 'pax_fcny', 'pref_line_y3_3', 'pax_fcny',
-                        'pref_city_y2_3',
-                        'dist_cnt_y1', 'pit_accu_amt_y3', 'dist_all_cnt_y2', 'pax_tax', 'dist_i_cnt_y2', 'pax_tax',
-                        'pref_line_y2_5', 'dist_all_cnt_y1', 'seg_flight', 'pref_line_y2_3', 'pax_fcny',
-                        'select_seat_cnt_y3', 'tkt_i_amt_y3', 'tkt_i_amt_y3', 'pax_fcny', 'dist_all_cnt_y3', 'pax_tax',
-                        'flt_delay_time_y1', 'pref_city_y2_2', 'dist_all_cnt_y3', 'avg_dist_cnt_y3', 'pit_accu_air_amt',
-                        'pit_accu_amt_y2', 'flt_delay_time_y2', 'tkt_all_amt_y2', 'dist_cnt_y3', 'dist_d_cnt_y3',
-                        'flt_delay_time_m3', 'pref_line_y3_4', 'dist_all_cnt_y2', 'flt_delay_time_y1', 'dist_i_cnt_y1',
-                        'flt_delay_time_y1', 'flt_delay_time_y1', 'pref_line_y2_5', 'dist_all_cnt_y3',
-                        'pref_aircraft_y2_4',
-                        'seg_cabin', 'pax_tax', 'dist_all_cnt_y3', 'tkt_i_amt_y3', 'pax_tax', 'pit_pay_avg_amt_y2',
-                        'pit_add_air_amt_y3', 'dist_i_cnt_y2', 'dist_all_cnt_y3', 'pax_tax', 'pit_all_amt',
-                        'pref_line_y3_1', 'pref_orig_y2_3', 'dist_all_cnt_y3', 'pref_orig_y3_2', 'tkt_d_amt_y2',
-                        'flt_delay_time_m6', 'pit_add_non_amt_y3'],
-                       ['select_seat_cnt_y3', 'pref_line_y2_1', 'tkt_3y_amt',
-                        'pit_add_air_amt_y3', 'tkt_all_amt_y2', 'dist_all_cnt_y3',
-                        'pax_tax', 'dist_cnt_y3', 'dist_all_cnt_y1', 'dist_cnt_y3',
-                        'avg_dist_cnt_y1', 'dist_cnt_y1', 'pax_fcny', 'pref_line_y3_5',
-                        'pref_line_y2_4', 'tkt_i_amt_y1', 'pref_line_y2_2', 'tkt_d_amt_y3',
-                        'tkt_i_amt_y2', 'flt_delay_time_m3', 'seg_flight',
-                        'flt_delay_time_m6', 'pref_line_y3_4', 'tkt_all_amt_y1',
-                        'dist_all_cnt_y2', 'seg_cabin', 'dist_cnt_y3', 'pref_line_y1_2',
-                        'pax_tax', 'pax_fcny', 'flt_delay_time_y1', 'pref_line_y3_3',
-                        'pax_tax', 'pref_aircraft_y3_3', 'flt_delay_time_y2',
-                        'avg_dist_cnt_y3', 'dist_cnt_y3', 'tkt_all_amt_m6', 'tkt_i_amt_y2',
-                        'dist_i_cnt_y2', 'select_seat_cnt_y2', 'flt_delay_time_m6',
-                        'tkt_avg_amt_y1', 'tkt_3y_amt', 'pref_line_y3_4',
-                        'dist_all_cnt_y3', 'pax_tax', 'tkt_all_amt_y3', 'tkt_i_amt_m6',
-                        'tkt_i_amt_y3', 'pax_fcny', 'tkt_i_amt_y3', 'tkt_i_amt_y3',
-                        'pref_line_y2_5', 'seg_route_to', 'tkt_avg_amt_m6', 'tkt_i_amt_y3',
-                        'seg_dep_time_hour', 'dist_i_cnt_y3', 'dist_cnt_y1',
-                        'pit_pay_avg_amt_y3', 'flt_delay_time_m3', 'tkt_3y_amt',
-                        'pref_aircraft_y2_5', 'tkt_i_amt_y3', 'dist_all_cnt_y2',
-                        'dist_cnt_y3', 'avg_dist_cnt_m6', 'pref_line_m3_2',
-                        'flt_leg_cnt_y1', 'pref_line_y2_2', 'pref_aircraft_y3_3',
-                        'flt_nature_cnt_y3', 'tkt_i_amt_y1', 'dist_all_cnt_y2'],
-                       ['pax_tax', 'pax_fcny', 'flt_delay_time_y1', 'dist_all_cnt_y2',
-                        'pax_tax', 'pref_line_y3_2', 'tkt_all_amt_y2', 'avg_dist_cnt_y2',
-                        'dist_all_cnt_y2', 'pref_line_y3_3', 'seg_flight', 'tkt_i_amt_y3',
-                        'dist_i_cnt_y3', 'dist_cnt_y1', 'tkt_all_amt_y3', 'dist_i_cnt_y2',
-                        'pref_line_y3_4', 'seg_cabin', 'select_seat_cnt_y3', 'tkt_3y_amt',
-                        'pref_city_y3_3', 'avg_dist_cnt_y3', 'dist_all_cnt_y3',
-                        'tkt_avg_amt_y3', 'pref_line_y2_1', 'pref_line_y1_2',
-                        'pit_accu_amt_y2', 'seg_route_to', 'dist_cnt_y1', 'tkt_d_amt_y3',
-                        'tkt_3y_amt', 'tkt_3y_amt', 'pax_tax', 'tkt_d_amt_y3', 'pax_fcny',
-                        'dist_i_cnt_y2', 'pref_line_y2_4', 'pax_fcny', 'tkt_i_amt_y2',
-                        'dist_all_cnt_y1', 'dist_d_cnt_y2', 'flt_delay_time_y1',
-                        'pref_line_y2_3', 'tkt_all_amt_y3', 'dist_cnt_y3',
-                        'pref_dest_city_y2', 'dist_i_cnt_y2', 'pit_cons_amt_y2',
-                        'dist_all_cnt_y3', 'seg_cabin', 'tkt_i_amt_y3',
-                        'flt_delay_time_y1', 'tkt_all_amt_y2', 'pref_orig_y2_5',
-                        'pref_dest_city_y1'],
-                       ['tkt_d_amt_y2', 'dist_all_cnt_y3', 'pax_fcny', 'pref_line_y2_5', 'avg_dist_cnt_y1',
-                        'dist_i_cnt_y2',
-                        'dist_cnt_y1', 'flt_delay_time_m3', 'pit_accu_amt_y3', 'pref_orig_m6_5', 'pref_orig_city_y3',
-                        'seg_cabin', 'pref_line_y1_3', 'flt_delay_time_y1', 'pit_accu_amt_y2', 'pax_tax', 'tkt_3y_amt',
-                        'seg_flight', 'tkt_all_amt_y2', 'pref_line_y3_5', 'pref_city_y2_5', 'pit_income_avg_amt_y3',
-                        'pref_line_y3_3', 'pref_line_y2_2', 'pax_tax', 'select_seat_cnt_y2', 'pax_tax', 'pax_fcny',
-                        'pref_line_y2_3', 'seg_dep_time_hour', 'avg_dist_cnt_y2', 'seg_cabin', 'pref_city_y3_3',
-                        'tkt_d_amt_y3', 'dist_i_cnt_y3', 'pax_fcny', 'pref_orig_y3_4', 'avg_dist_cnt_y2',
-                        'pref_city_y3_3',
-                        'pref_aircraft_y2_4', 'pref_orig_city_y1', 'pref_dest_city_y1', 'tkt_avg_amt_y3',
-                        'pref_city_y1_2',
-                        'pref_orig_city_y1', 'flt_delay_time_y1', 'tkt_d_amt_y2', 'flt_delay_time_m6',
-                        'flt_delay_time_m3',
-                        'tkt_all_amt_y3', 'pax_tax', 'pax_fcny', 'pit_income_cnt_y2', 'pref_orig_city_m3',
-                        'pref_line_y2_2'],
-                       ['dist_i_cnt_y3', 'pax_tax', 'avg_dist_cnt_y1', 'avg_dist_cnt_y3',
-                        'tkt_i_amt_y3', 'dist_cnt_y3', 'select_seat_cnt_y2', 'pax_fcny',
-                        'pax_tax', 'flt_delay_time_y1', 'seg_cabin', 'pref_line_y2_5',
-                        'tkt_all_amt_y3', 'flt_delay_time_y1', 'tkt_avg_amt_y2',
-                        'pref_line_y2_2', 'pref_line_y3_1', 'seg_flight', 'pax_tax',
-                        'flt_delay_time_m3', 'pit_cons_amt_y3', 'tkt_i_amt_y3',
-                        'pref_line_y1_2', 'tkt_all_amt_y3', 'pax_tax', 'dist_all_cnt_y3',
-                        'dist_i_cnt_y3', 'tkt_all_amt_y2', 'pref_line_y2_1',
-                        'tkt_i_amt_y3', 'pref_line_y3_3', 'tkt_all_amt_y3',
-                        'tkt_all_amt_y3', 'pax_fcny', 'pax_tax', 'pref_line_y3_5',
-                        'pref_orig_city_y3', 'dist_all_cnt_y2', 'tkt_all_amt_y3',
-                        'tkt_d_amt_y2', 'tkt_all_amt_y2', 'pref_line_m6_3',
-                        'pit_add_air_amt_y3', 'flt_delay_time_m6', 'tkt_i_amt_y2',
-                        'seg_cabin', 'pref_city_y2_5', 'pref_orig_y2_4', 'dist_cnt_y1',
-                        'dist_cnt_y3', 'tkt_avg_amt_y2', 'dist_cnt_y3', 'tkt_d_amt_y3',
-                        'tkt_avg_amt_m6', 'pref_orig_y3_3', 'tkt_i_amt_y2',
-                        'pit_avg_cons_amt_y2'],
-                       ['tkt_avg_amt_y3', 'pref_city_y2_2', 'pax_tax', 'dist_i_cnt_y3',
-                        'flt_delay_time_y1', 'tkt_all_amt_y3', 'tkt_d_amt_y3',
-                        'seg_dep_time_hour', 'avg_dist_cnt_y2', 'avg_dist_cnt_y3',
-                        'pref_line_y2_2', 'tkt_all_amt_y1', 'pax_fcny', 'tkt_avg_amt_y1',
-                        'pax_tax', 'dist_cnt_y3', 'pax_tax', 'tkt_d_amt_y2',
-                        'tkt_avg_amt_y2', 'dist_cnt_y3', 'dist_cnt_y3', 'pax_tax',
-                        'dist_all_cnt_y3', 'seg_flight', 'tkt_3y_amt', 'dist_cnt_y3',
-                        'pax_fcny', 'pref_line_y1_2', 'seg_cabin', 'dist_cnt_y3',
-                        'tkt_3y_amt', 'pax_tax', 'pref_line_y3_1', 'pax_tax', 'tkt_3y_amt',
-                        'dist_cnt_y3', 'tkt_i_amt_y2', 'dist_cnt_y1', 'pax_tax',
-                        'dist_i_cnt_y3', 'pref_orig_city_y2', 'pax_tax', 'pit_accu_amt_y2',
-                        'select_seat_cnt_y2', 'pref_city_y2_3', 'pref_aircraft_m6_4',
-                        'pref_city_y2_2', 'tkt_all_amt_y3', 'pref_line_y3_5',
-                        'dist_i_cnt_y1', 'tkt_d_amt_y2', 'dist_i_cnt_y2', 'pref_line_y2_4',
-                        'pref_orig_y2_2', 'tkt_all_amt_y3', 'pref_city_y3_3',
-                        'flt_delay_time_y2', 'pit_avg_amt_y2', 'avg_dist_cnt_y1',
-                        'seg_cabin', 'pref_orig_y1_5', 'tkt_all_amt_y2', 'pref_city_y3_1',
-                        'pref_orig_m6_1', 'dist_cnt_y1', 'pref_orig_y3_3',
-                        'pref_line_y1_2', 'dist_cnt_y3'],
-                       ['pax_fcny', 'dist_all_cnt_y1', 'select_seat_cnt_y2', 'pref_orig_y2_2', 'avg_dist_cnt_y2',
-                        'flt_delay_time_y2', 'flt_delay_time_y2', 'dist_all_cnt_y2', 'avg_dist_cnt_y3',
-                        'pref_line_y3_4',
-                        'pref_dest_city_y2', 'pax_tax', 'pax_fcny', 'dist_cnt_y1', 'pax_fcny', 'pax_fcny', 'seg_flight',
-                        'pref_orig_city_y3', 'avg_dist_cnt_y1', 'tkt_avg_amt_y1', 'pax_tax', 'seg_cabin',
-                        'dist_i_cnt_y3',
-                        'pref_line_y3_5', 'pax_fcny', 'tkt_i_amt_y3', 'pref_line_y2_1', 'pref_line_y2_3',
-                        'avg_dist_cnt_y2',
-                        'flt_delay_time_y1', 'avg_dist_cnt_y2', 'flt_delay_time_y2', 'pref_city_y3_3', 'pref_city_y2_2',
-                        'dist_all_cnt_y2', 'pref_city_y3_2', 'tkt_all_amt_y3', 'tkt_all_amt_y3', 'pit_all_amt',
-                        'tkt_d_amt_y3', 'pax_tax', 'pit_accu_amt_y1', 'tkt_i_amt_y3', 'pax_fcny', 'tkt_i_amt_y3',
-                        'dist_i_cnt_y1', 'pax_tax', 'avg_dist_cnt_y2', 'tkt_i_amt_y3', 'tkt_all_amt_y2',
-                        'pit_accu_air_amt',
-                        'pit_pay_avg_amt_y2', 'flt_delay_time_m3', 'tkt_all_amt_y1', 'pref_city_y3_3',
-                        'pit_pay_avg_amt_y3',
-                        'flt_delay_time_y1', 'flt_delay_time_y2', 'pref_line_y2_2', 'pax_fcny', 'pit_accu_amt_y3',
-                        'pit_income_avg_amt_y3', 'pref_city_y3_2', 'pref_line_y2_3', 'pax_fcny', 'tkt_i_amt_y2',
-                        'pit_avg_interval_y3'],
-                       ['seg_route_to', 'pref_line_y2_2', 'pax_fcny', 'pref_line_y3_4', 'dist_cnt_y3', 'tkt_i_amt_y1',
-                        'dist_i_cnt_y3', 'flt_delay_time_y2', 'tkt_avg_amt_y2', 'pax_fcny', 'tkt_all_amt_y2',
-                        'dist_all_cnt_y3', 'seg_dep_time_hour', 'flt_delay_time_y1', 'pax_fcny', 'tkt_avg_amt_y1',
-                        'tkt_all_amt_y1', 'dist_cnt_y1', 'pref_line_y2_1', 'tkt_i_amt_y3', 'flt_delay_time_m3',
-                        'select_seat_cnt_y3', 'pref_line_y1_1', 'pax_tax', 'dist_cnt_y3', 'pref_orig_y3_3',
-                        'pit_avg_cons_amt_y2', 'tkt_all_amt_y1', 'dist_cnt_y3', 'dist_all_cnt_y2', 'pref_city_y1_5',
-                        'avg_dist_cnt_y3', 'pax_tax', 'tkt_all_amt_y2', 'dist_all_cnt_y3', 'dist_cnt_y1',
-                        'tkt_avg_amt_m3'],
-                       ['pit_accu_amt_y3', 'pax_fcny', 'dist_cnt_y3', 'tkt_all_amt_y2',
-                        'pit_avg_amt_y3', 'tkt_all_amt_y3', 'dist_all_cnt_y3',
-                        'pref_city_y3_2', 'select_seat_cnt_y2', 'seg_flight',
-                        'pref_line_y1_2', 'pref_line_y2_4', 'pit_accu_amt_y1',
-                        'pref_city_y2_3', 'pax_fcny', 'pax_fcny', 'pref_orig_y3_2',
-                        'pit_accu_amt_y3', 'dist_all_cnt_y1', 'pref_line_y2_2', 'pax_tax',
-                        'pref_line_y2_5', 'pit_accu_amt_y3', 'pref_line_y3_1', 'seg_cabin',
-                        'tkt_i_amt_y2', 'dist_all_cnt_y3', 'pref_city_y3_3',
-                        'seg_dep_time_hour', 'pit_avg_amt_y3', 'tkt_all_amt_y3',
-                        'dist_cnt_y1', 'pref_city_y3_2', 'tkt_avg_amt_y2',
-                        'tkt_all_amt_y3', 'pref_aircraft_y2_5', 'pref_line_y3_4',
-                        'tkt_avg_amt_y1', 'pit_add_air_amt_y3', 'pref_orig_y1_4',
-                        'tkt_d_amt_y2', 'pit_accu_air_amt', 'select_seat_cnt_y2',
-                        'pref_line_y3_3', 'tkt_avg_amt_y3', 'pax_tax', 'pref_line_y2_3',
-                        'dist_i_cnt_y3', 'tkt_i_amt_y3', 'tkt_avg_amt_m6',
-                        'pref_dest_city_m6', 'tkt_d_amt_y2', 'pit_pay_avg_amt_y2',
-                        'dist_all_cnt_y3', 'pit_accu_amt_y3', 'cabin_hi_cnt_y2']]
+
 
 
 def testParameters(x_train, x_test, y_train, y_test, clf, file):
@@ -414,67 +256,69 @@ def GridSearchSelf(x_train, x_test, y_train, y_test, file):
     from sklearn.model_selection import GridSearchCV
 
     print('设置迭代次数', file=file)
-    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1',
+    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
                            learning_rate=0.1)
-    parameters = {'n_estimators': range(500, 2500, 200)}
+    parameters = {'n_estimators': range(1000, 2500, 50)}
     kfold = StratifiedKFold(n_splits=5, random_state=0, shuffle=True)
     clf = GridSearchCV(model, parameters, cv=kfold, verbose=0)
     clf = clf.fit(x_train, y_train)
     testParameters(x_train, x_test, y_train, y_test, clf, file)
-
-    print("设置max_depth和num_leaves", file=file)
     n_estimators = clf.best_params_['n_estimators']
     print('n_estimators is ', n_estimators)
-    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1',
+
+    print("设置max_depth和num_leaves", file=file)
+    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
                            learning_rate=0.1,
                            n_estimators=n_estimators)
-    parameters = {'max_depth': range(4, 10, 1), 'num_leaves': range(1, 200, 10)}
+    parameters = {'max_depth': range(6, 10, 1), 'num_leaves': range(10, 150, 10)}
     clf = GridSearchCV(model, parameters, cv=kfold, verbose=0)
     clf = clf.fit(x_train, y_train)
     testParameters(x_train, x_test, y_train, y_test, clf, file)
-
-    print("确定min_data_in_leaf和max_bin_in", file=file)
     max_depth = clf.best_params_['max_depth'],
     num_leaves = clf.best_params_['num_leaves']
     print('max_depth is {0},num_leaves is {1}'.format(max_depth, num_leaves), file=file)
-    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1',
+
+    print("确定min_data_in_leaf和max_bin_in", file=file)
+
+    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
                            learning_rate=0.1,
                            n_estimators=n_estimators,
                            max_depth=max_depth,
                            num_leaves=num_leaves)
-    parameters = {'max_bin': range(1, 500, 50), 'min_data_in_leaf': range(1, 1500, 50)}
+    parameters = {'max_bin': range(300, 500, 20), 'min_data_in_leaf': range(10, 20, 10)}
 
     clf = GridSearchCV(model, parameters, cv=kfold, verbose=0)
     clf = clf.fit(x_train, y_train)
     testParameters(x_train, x_test, y_train, y_test, clf, file)
-
-    print("确定feature_fraction、bagging_fraction、bagging_freq", file=file)
     max_bin = clf.best_params_['max_bin']
     min_data_in_leaf = clf.best_params_['min_data_in_leaf']
     print('max_bin is {0},min_data_in_deaf is {1}'.format(max_bin, min_data_in_leaf), file=file)
-    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1',
+
+    print("确定feature_fraction、bagging_fraction、bagging_freq", file=file)
+    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
                            learning_rate=0.1,
                            n_estimators=n_estimators,
                            max_depth=max_depth,
                            num_leaves=num_leaves,
                            max_bin=max_bin,
                            min_data_in_leaf=min_data_in_leaf)
-    parameters = {'feature_fraction': [0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-                  'bagging_fraction': [0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-                  'bagging_freq': range(0, 50, 10)}
+    parameters = {'feature_fraction': [0.7, 0.8, 0.9, 1.0],
+                  'bagging_fraction': [0.7, 0.8, 0.9, 1.0],
+                  'bagging_freq': range(0, 20, 2)}
 
     clf = GridSearchCV(model, parameters, cv=kfold, verbose=0)
     clf = clf.fit(x_train, y_train)
     testParameters(x_train, x_test, y_train, y_test, clf, file)
 
-    print('确定lambda_l1和lambda_l2', file=file)
     feature_fraction = clf.best_params_['feature_fraction']
     bagging_fraction = clf.best_params_['bagging_fraction']
     bagging_freq = clf.best_params_['bagging_freq']
     print(
         'feature_fraction is {0},bagging_fraction is {1},bagging_freq is {2}'.format(feature_fraction, bagging_fraction,
                                                                                      bagging_freq), file=file)
-    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1',
+
+    print('确定lambda_l1和lambda_l2', file=file)
+    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
                            learning_rate=0.1,
                            n_estimators=n_estimators,
                            max_depth=max_depth,
@@ -484,43 +328,27 @@ def GridSearchSelf(x_train, x_test, y_train, y_test, file):
                            feature_fraction=feature_fraction,
                            bagging_fraction=bagging_fraction,
                            bagging_freq=bagging_freq)
-    parameters = {'lambda_l1': [1e-5, 1e-3, 1e-1, 0.0, 0.1, 0.2, 0.3],
-                  'lambda_l2': [1e-5, 1e-3, 1e-1, 0.0, 0.1, 0.2, 0.3]
+    parameters = {'lambda_l1': [1e-5, 1e-3, 1e-1, 0.0, 0.1],
+                  'lambda_l2': [1e-5, 1e-3, 1e-1, 0.0, 0.1]
                   }
 
     clf = GridSearchCV(model, parameters, cv=kfold, verbose=0)
     clf = clf.fit(x_train, y_train)
     testParameters(x_train, x_test, y_train, y_test, clf, file)
-
-    print('确定min_split_gain ', file=file)
     lambda_l1 = clf.best_params_['lambda_l1']
     lambda_l2 = clf.best_params_['lambda_l2']
     print('lamda1 is {0},lamda2 is {1}'.format(lambda_l1, lambda_l2), file=file)
-    model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1',
-                           learning_rate=0.1,
-                           n_estimators=n_estimators,
-                           max_depth=max_depth,
-                           num_leaves=num_leaves,
-                           max_bin=max_bin,
-                           min_data_in_leaf=min_data_in_leaf,
-                           feature_fraction=feature_fraction,
-                           bagging_fraction=bagging_fraction,
-                           bagging_freq=bagging_freq,
-                           lambda_l1=lambda_l1,
-                           lambda_l2=lambda_l2)
-    parameters = {'min_split_gain': [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]}
 
     clf = GridSearchCV(model, parameters, cv=kfold, verbose=0)
     clf = clf.fit(x_train, y_train)
     testParameters(x_train, x_test, y_train, y_test, clf, file)
-
+    min_split_gain = 0.0
+    print('min_split_gain为 ', min_split_gain, file=file)
     print('调低学习率，增加迭代次数并验证模型效果', file=file)
-    min_split_gain = clf.best_params_['min_split_gain']
-    print('min_split_gain is {0}'.format(min_split_gain), file=file)
-    learing_rates = [0.005, 0.01, 0.025, 0.05, 0.1]
 
+    learing_rates = [0.01, 0.025, 0.05, 0.075, 0.1]
     for learing_rate in learing_rates:
-        model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1',
+        model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
                                learning_rate=learing_rate,
                                n_estimators=n_estimators,
                                max_depth=max_depth,
@@ -539,7 +367,7 @@ def GridSearchSelf(x_train, x_test, y_train, y_test, file):
               min_split_gain, file=file)
         model.fit(x_train, y_train)
         testParameters(x_train, x_test, y_train, y_test, model, file)
-        model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1',
+        model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
                                learning_rate=learing_rate,
                                n_estimators=n_estimators * 2,
                                max_depth=max_depth,
@@ -552,13 +380,13 @@ def GridSearchSelf(x_train, x_test, y_train, y_test, file):
                                lambda_l1=lambda_l1,
                                lambda_l2=lambda_l2,
                                min_split_gain=min_split_gain)
-        print('参数为', '学习率', learing_rate, '迭代次数', n_estimators, '深度与叶子数量', max_depth, num_leaves,
+        print('参数为', '学习率', learing_rate, '迭代次数', n_estimators * 2, '深度与叶子数量', max_depth, num_leaves,
               'max_bin与min_data_in_leaf', max_bin, min_data_in_leaf, 'feature_fraction,bagging_fraction,bagging_freq',
               feature_fraction, bagging_fraction, bagging_freq, 'lamda1,lamda2', lambda_l1, lambda_l2, 'min_split',
               min_split_gain, file=file)
         model.fit(x_train, y_train)
         testParameters(x_train, x_test, y_train, y_test, model, file)
-        model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1',
+        model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
                                learning_rate=learing_rate,
                                n_estimators=n_estimators * 3,
                                max_depth=max_depth,
@@ -571,7 +399,45 @@ def GridSearchSelf(x_train, x_test, y_train, y_test, file):
                                lambda_l1=lambda_l1,
                                lambda_l2=lambda_l2,
                                min_split_gain=min_split_gain)
-        print('参数为', '学习率', learing_rate, '迭代次数', n_estimators, '深度与叶子数量', max_depth, num_leaves,
+        print('参数为', '学习率', learing_rate, '迭代次数', n_estimators * 3, '深度与叶子数量', max_depth, num_leaves,
+              'max_bin与min_data_in_leaf', max_bin, min_data_in_leaf, 'feature_fraction,bagging_fraction,bagging_freq',
+              feature_fraction, bagging_fraction, bagging_freq, 'lamda1,lamda2', lambda_l1, lambda_l2, 'min_split',
+              min_split_gain, file=file)
+        model.fit(x_train, y_train)
+        testParameters(x_train, x_test, y_train, y_test, model, file)
+        model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
+                               learning_rate=learing_rate,
+                               n_estimators=n_estimators * 5,
+                               max_depth=max_depth,
+                               num_leaves=num_leaves,
+                               max_bin=max_bin,
+                               min_data_in_leaf=min_data_in_leaf,
+                               feature_fraction=feature_fraction,
+                               bagging_fraction=bagging_fraction,
+                               bagging_freq=bagging_freq,
+                               lambda_l1=lambda_l1,
+                               lambda_l2=lambda_l2,
+                               min_split_gain=min_split_gain)
+        print('参数为', '学习率', learing_rate, '迭代次数', n_estimators * 5, '深度与叶子数量', max_depth, num_leaves,
+              'max_bin与min_data_in_leaf', max_bin, min_data_in_leaf, 'feature_fraction,bagging_fraction,bagging_freq',
+              feature_fraction, bagging_fraction, bagging_freq, 'lamda1,lamda2', lambda_l1, lambda_l2, 'min_split',
+              min_split_gain, file=file)
+        model.fit(x_train, y_train)
+        testParameters(x_train, x_test, y_train, y_test, model, file)
+        model = LGBMClassifier(boosting_type='gbdt', objective='binary', metrics='f1', is_unbalance=True,
+                               learning_rate=learing_rate,
+                               n_estimators=n_estimators * 10,
+                               max_depth=max_depth,
+                               num_leaves=num_leaves,
+                               max_bin=max_bin,
+                               min_data_in_leaf=min_data_in_leaf,
+                               feature_fraction=feature_fraction,
+                               bagging_fraction=bagging_fraction,
+                               bagging_freq=bagging_freq,
+                               lambda_l1=lambda_l1,
+                               lambda_l2=lambda_l2,
+                               min_split_gain=min_split_gain)
+        print('参数为', '学习率', learing_rate, '迭代次数', n_estimators * 10, '深度与叶子数量', max_depth, num_leaves,
               'max_bin与min_data_in_leaf', max_bin, min_data_in_leaf, 'feature_fraction,bagging_fraction,bagging_freq',
               feature_fraction, bagging_fraction, bagging_freq, 'lamda1,lamda2', lambda_l1, lambda_l2, 'min_split',
               min_split_gain, file=file)
@@ -580,18 +446,18 @@ def GridSearchSelf(x_train, x_test, y_train, y_test, file):
     return
 
 
-def testBaseline(x_train, x_test, y_train, y_test):
+def testBaseline(x_train, x_test, y_train, y_test, file):
     from sklearn.tree import DecisionTreeClassifier
-    clf = DecisionTreeClassifier()
+    clf = DecisionTreeClassifier(random_state=0)
     clf.fit(x_train, y_train)
     ## 在训练集和测试集上分布利用训练好的模型进行预测
     train_predict = clf.predict(x_train)
     test_predict = clf.predict(x_test)
     ## 利用f1评估模型效果
     print('The f1 of the train is:', metrics.f1_score(y_train, train_predict), 'The auc of the train is',
-          metrics.roc_auc_score(y_train, clf.predict_proba(x_train)[:, 1]))
+          metrics.roc_auc_score(y_train, clf.predict_proba(x_train)[:, 1]), file=file)
     print('The f1 of the test is:', metrics.f1_score(y_test, test_predict), 'The auc of the test is',
-          metrics.roc_auc_score(y_test, clf.predict_proba(x_test)[:, 1]))
+          metrics.roc_auc_score(y_test, clf.predict_proba(x_test)[:, 1]), file=file)
     return 0
 
 
@@ -611,7 +477,7 @@ if __name__ == "__main__":
     X_train, X_test = minmax_target(X_train, X_test, Y_train, continue_list, discrete_list)
     # # 模型交叉验证！
     del train, test, X_test
-    file = open('param.txt', 'a')
+    file = open('is_unbalance.txt', 'a')
     kfold = StratifiedKFold(n_splits=10, random_state=0, shuffle=True)
     for k, (train_index, test_index) in enumerate(kfold.split(X_train, Y_train)):
         feature_subset = list(set(feature_subset_list[k]))
@@ -623,13 +489,26 @@ if __name__ == "__main__":
         print('对第{0}折进行自动调参'.format(k), file=file)
         GridSearchSelf(x_train, x_test, y_train, y_test, file)
     file.close()
+    # file = open('对比决策树.txt', 'a')
+    # kfold = StratifiedKFold(n_splits=10, random_state=0, shuffle=True)
+    # for k, (train_index, test_index) in enumerate(kfold.split(X_train, Y_train)):
+    #     feature_subset = list(set(feature_subset_list[k]))
+    #     x_train = X_train.loc[train_index][feature_subset]
+    #     x_test = X_train.loc[test_index][feature_subset]
+    #     y_train = Y_train.loc[train_index]
+    #     y_test = Y_train.loc[test_index]
+    #     # 对获得的9折训练集交叉验证训练模型，对10%的验证集计算结果，并对10折情况进行平均查看f1值
+    #     print('对第{0}折进行验证'.format(k), file=file)
+    #     testBaseline(x_train, x_test, y_train, y_test, file)
+    # file.close()
+
     # # getTopN(feature_subset_list, 70)  # 前68个，其实相差不大
 
     # feature_subset_list = []
     # kfold = StratifiedKFold(n_splits=10, random_state=0, shuffle=True)
     # for k, (train_index, test_index) in enumerate(kfold.split(X_train, Y_train)):  # 验证函数改为3折交叉，如果效果更好则重新设置特征子集
     #     # 十折交叉得到10个特征子集查看一下结果如何？
-    #     if k == 1 or k == 4 or k == 7 or k == 8:
+    #     if k == 1 or k == 3 or k == 8:
     #         print('第{0}折的尝试'.format(k))
     #         x_train = X_train.loc[train_index]
     #         x_test = X_train.loc[test_index]

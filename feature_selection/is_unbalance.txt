@@ -1,0 +1,1001 @@
+对第0折进行自动调参
+设置迭代次数
+The f1 of the train is: 0.8847310390912128 The auc of the train is 0.9993495176172137
+The f1 of the test is: 0.4077669902912622 The auc of the test is 0.823593573081278
+设置max_depth和num_leaves
+The f1 of the train is: 0.914364640883978 The auc of the train is 0.9996527646292563
+The f1 of the test is: 0.4270462633451957 The auc of the test is 0.8142276497809284
+max_depth is (9,),num_leaves is 140
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9268463423171159 The auc of the train is 0.9997489212365079
+The f1 of the test is: 0.4334600760456274 The auc of the test is 0.8173321887461231
+max_bin is 460,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9268463423171159 The auc of the train is 0.9997489212365079
+The f1 of the test is: 0.4334600760456274 The auc of the test is 0.8173321887461231
+feature_fraction is 1.0,bagging_fraction is 0.7,bagging_freq is 0
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9268463423171159 The auc of the train is 0.9997489212365079
+The f1 of the test is: 0.4334600760456274 The auc of the test is 0.8173321887461231
+lamda1 is 0.0,lamda2 is 0.0
+确定min_split_gain 
+The f1 of the train is: 0.7712177121771219 The auc of the train is 0.9924978016307688
+The f1 of the test is: 0.30526315789473685 The auc of the test is 0.8418931226308275
+min_split_gain为  0.1
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1475 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.5373949579831933 The auc of the train is 0.9828338051928533
+The f1 of the test is: 0.34057971014492755 The auc of the test is 0.8200336607098901
+参数为 学习率 0.01 迭代次数 2950 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.7231234533956556 The auc of the train is 0.996150589598452
+The f1 of the test is: 0.3482587064676617 The auc of the test is 0.8096031482301974
+参数为 学习率 0.01 迭代次数 4425 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8191126279863482 The auc of the train is 0.9984864725023945
+The f1 of the test is: 0.3861671469740634 The auc of the test is 0.8142368803229458
+参数为 学习率 0.01 迭代次数 7375 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.846968238691049 The auc of the train is 0.9988892510412771
+The f1 of the test is: 0.39528023598820056 The auc of the test is 0.8170952715010091
+参数为 学习率 0.01 迭代次数 14750 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.846968238691049 The auc of the train is 0.9988892510412771
+The f1 of the test is: 0.39528023598820056 The auc of the test is 0.8170952715010091
+参数为 学习率 0.025 迭代次数 1475 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.7780401416765054 The auc of the train is 0.9978563921758763
+The f1 of the test is: 0.37765957446808507 The auc of the test is 0.8097939127652243
+参数为 学习率 0.025 迭代次数 2950 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.85965483555845 The auc of the train is 0.9990275274076839
+The f1 of the test is: 0.4084084084084084 The auc of the test is 0.814541488209521
+参数为 学习率 0.025 迭代次数 4425 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.85965483555845 The auc of the train is 0.9990275274076839
+The f1 of the test is: 0.4084084084084084 The auc of the test is 0.814541488209521
+参数为 学习率 0.025 迭代次数 7375 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.85965483555845 The auc of the train is 0.9990275274076839
+The f1 of the test is: 0.4084084084084084 The auc of the test is 0.814541488209521
+参数为 学习率 0.025 迭代次数 14750 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.85965483555845 The auc of the train is 0.9990275274076839
+The f1 of the test is: 0.4084084084084084 The auc of the test is 0.814541488209521
+参数为 学习率 0.05 迭代次数 1475 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.865094957432875 The auc of the train is 0.9990534589932207
+The f1 of the test is: 0.391304347826087 The auc of the test is 0.8153537759070546
+参数为 学习率 0.05 迭代次数 2950 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.865094957432875 The auc of the train is 0.9990534589932207
+The f1 of the test is: 0.391304347826087 The auc of the test is 0.8153537759070546
+参数为 学习率 0.05 迭代次数 4425 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.865094957432875 The auc of the train is 0.9990534589932207
+The f1 of the test is: 0.391304347826087 The auc of the test is 0.8153537759070546
+参数为 学习率 0.05 迭代次数 7375 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.865094957432875 The auc of the train is 0.9990534589932207
+The f1 of the test is: 0.391304347826087 The auc of the test is 0.8153537759070546
+参数为 学习率 0.05 迭代次数 14750 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.865094957432875 The auc of the train is 0.9990534589932207
+The f1 of the test is: 0.391304347826087 The auc of the test is 0.8153537759070546
+参数为 学习率 0.075 迭代次数 1475 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8512556342562781 The auc of the train is 0.9989633848681647
+The f1 of the test is: 0.40615384615384614 The auc of the test is 0.8223536036036035
+参数为 学习率 0.075 迭代次数 2950 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8512556342562781 The auc of the train is 0.9989633848681647
+The f1 of the test is: 0.40615384615384614 The auc of the test is 0.8223536036036035
+参数为 学习率 0.075 迭代次数 4425 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8512556342562781 The auc of the train is 0.9989633848681647
+The f1 of the test is: 0.40615384615384614 The auc of the test is 0.8223536036036035
+参数为 学习率 0.075 迭代次数 7375 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8512556342562781 The auc of the train is 0.9989633848681647
+The f1 of the test is: 0.40615384615384614 The auc of the test is 0.8223536036036035
+参数为 学习率 0.075 迭代次数 14750 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8512556342562781 The auc of the train is 0.9989633848681647
+The f1 of the test is: 0.40615384615384614 The auc of the test is 0.8223536036036035
+参数为 学习率 0.1 迭代次数 1475 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8615184099055068 The auc of the train is 0.9990617723544664
+The f1 of the test is: 0.40978593272171254 The auc of the test is 0.8253166075911977
+参数为 学习率 0.1 迭代次数 2950 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8615184099055068 The auc of the train is 0.9990617723544664
+The f1 of the test is: 0.40978593272171254 The auc of the test is 0.8253166075911977
+参数为 学习率 0.1 迭代次数 4425 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8615184099055068 The auc of the train is 0.9990617723544664
+The f1 of the test is: 0.40978593272171254 The auc of the test is 0.8253166075911977
+参数为 学习率 0.1 迭代次数 7375 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8615184099055068 The auc of the train is 0.9990617723544664
+The f1 of the test is: 0.40978593272171254 The auc of the test is 0.8253166075911977
+参数为 学习率 0.1 迭代次数 14750 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.1
+The f1 of the train is: 0.8615184099055068 The auc of the train is 0.9990617723544664
+The f1 of the test is: 0.40978593272171254 The auc of the test is 0.8253166075911977
+对第1折进行自动调参
+设置迭代次数
+The f1 of the train is: 0.9006126616746085 The auc of the train is 0.999439553607585
+The f1 of the test is: 0.35842293906810035 The auc of the test is 0.8318456776448581
+设置max_depth和num_leaves
+The f1 of the train is: 0.9243111266131845 The auc of the train is 0.9997426099462046
+The f1 of the test is: 0.3557312252964427 The auc of the test is 0.8216090065475312
+max_depth is (9,),num_leaves is 130
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3770491803278688 The auc of the test is 0.8344794589671638
+max_bin is 440,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3770491803278688 The auc of the test is 0.8344794589671638
+feature_fraction is 1.0,bagging_fraction is 0.7,bagging_freq is 0
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3770491803278688 The auc of the test is 0.8344794589671638
+lamda1 is 0.0,lamda2 is 0.0
+确定min_split_gain 
+The f1 of the train is: 0.9644787644787646 The auc of the train is 0.9997982293837125
+The f1 of the test is: 0.38317757009345793 The auc of the test is 0.8346425318761386
+min_split_gain为  0.0
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1475 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.45713256484149856 The auc of the train is 0.9731253818473639
+The f1 of the test is: 0.29402261712439426 The auc of the test is 0.8175244917048196
+参数为 学习率 0.01 迭代次数 2950 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.6780273689646268 The auc of the train is 0.9946962280640237
+The f1 of the test is: 0.340632603406326 The auc of the test is 0.8194105991237138
+参数为 学习率 0.01 迭代次数 4425 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.7960228984633925 The auc of the train is 0.9982319806846298
+The f1 of the test is: 0.3609467455621302 The auc of the test is 0.815029168512775
+参数为 学习率 0.01 迭代次数 7375 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9112792297111417 The auc of the train is 0.9995235071157605
+The f1 of the test is: 0.35741444866920147 The auc of the test is 0.8138691970659183
+参数为 学习率 0.01 迭代次数 14750 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997987632692972
+The f1 of the test is: 0.37190082644628103 The auc of the test is 0.8227582090287008
+参数为 学习率 0.025 迭代次数 1475 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.7365185806091087 The auc of the train is 0.9970446954138885
+The f1 of the test is: 0.3404255319148936 The auc of the test is 0.8170829641116526
+参数为 学习率 0.025 迭代次数 2950 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9181124219292158 The auc of the train is 0.9995442905188747
+The f1 of the test is: 0.3656716417910448 The auc of the test is 0.8217936173878797
+参数为 学习率 0.025 迭代次数 4425 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9337561663143059 The auc of the train is 0.9997851491868904
+The f1 of the test is: 0.3534136546184739 The auc of the test is 0.8258119800127997
+参数为 学习率 0.025 迭代次数 7375 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.38174273858921165 The auc of the test is 0.8398270196425934
+参数为 学习率 0.025 迭代次数 14750 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.37656903765690375 The auc of the test is 0.8359778836213263
+参数为 学习率 0.05 迭代次数 1475 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9216300940438872 The auc of the train is 0.9995593537192968
+The f1 of the test is: 0.338235294117647 The auc of the test is 0.8203844213065524
+参数为 学习率 0.05 迭代次数 2950 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3770491803278688 The auc of the test is 0.8314303032540737
+参数为 学习率 0.05 迭代次数 4425 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3682008368200837 The auc of the test is 0.8401962413232905
+参数为 学习率 0.05 迭代次数 7375 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.36134453781512604 The auc of the test is 0.8368178629449122
+参数为 学习率 0.05 迭代次数 14750 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3659574468085106 The auc of the test is 0.8348240658691479
+参数为 学习率 0.075 迭代次数 1475 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9340853013746915 The auc of the train is 0.9997881999616594
+The f1 of the test is: 0.36363636363636365 The auc of the test is 0.8219136144341064
+参数为 学习率 0.075 迭代次数 2950 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080357
+The f1 of the test is: 0.37130801687763715 The auc of the test is 0.8387931989366415
+参数为 学习率 0.075 迭代次数 4425 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080357
+The f1 of the test is: 0.3628691983122363 The auc of the test is 0.8368793998916949
+参数为 学习率 0.075 迭代次数 7375 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3728813559322034 The auc of the test is 0.8340210087136316
+参数为 学习率 0.075 迭代次数 14750 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3697478991596639 The auc of the test is 0.8319656746910845
+参数为 学习率 0.1 迭代次数 1475 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3770491803278688 The auc of the test is 0.8344794589671638
+参数为 学习率 0.1 迭代次数 2950 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.3734439834024897 The auc of the test is 0.8416054374046177
+参数为 学习率 0.1 迭代次数 4425 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.37656903765690375 The auc of the test is 0.8405685398513267
+参数为 学习率 0.1 迭代次数 7375 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080356
+The f1 of the test is: 0.37656903765690375 The auc of the test is 0.8371532393048786
+参数为 学习率 0.1 迭代次数 14750 深度与叶子数量 (9,) 130 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9347442680776014 The auc of the train is 0.9997989158080357
+The f1 of the test is: 0.37656903765690375 The auc of the test is 0.8348363732585045
+对第2折进行自动调参
+设置迭代次数
+The f1 of the train is: 0.9023477373256209 The auc of the train is 0.9994907137278428
+The f1 of the test is: 0.43243243243243246 The auc of the test is 0.842488817020433
+设置max_depth和num_leaves
+The f1 of the train is: 0.9269486193638586 The auc of the train is 0.999735963742628
+The f1 of the test is: 0.45185185185185184 The auc of the test is 0.835721720382142
+max_depth is (9,),num_leaves is 140
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4674329501915709 The auc of the test is 0.8304632417630076
+max_bin is 480,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4573643410852713 The auc of the test is 0.8355064247921392
+feature_fraction is 0.9,bagging_fraction is 0.7,bagging_freq is 0
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.46332046332046334 The auc of the test is 0.836906620571726
+lamda1 is 0.001,lamda2 is 0.001
+确定min_split_gain 
+The f1 of the train is: 0.9653045489591364 The auc of the train is 0.9998024586580724
+The f1 of the test is: 0.46636771300448426 The auc of the test is 0.8398959766055785
+min_split_gain为  0.0
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.5031201248049922 The auc of the train is 0.9806095491728566
+The f1 of the test is: 0.32558139534883723 The auc of the test is 0.8289453304090305
+参数为 学习率 0.01 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.7025586353944563 The auc of the train is 0.9960057704630576
+The f1 of the test is: 0.4148148148148148 The auc of the test is 0.8371606383901464
+参数为 学习率 0.01 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.8254364089775561 The auc of the train is 0.998730442492606
+The f1 of the test is: 0.45348837209302334 The auc of the test is 0.8308194862644511
+参数为 学习率 0.01 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9201943095072865 The auc of the train is 0.9996247705258563
+The f1 of the test is: 0.4714285714285714 The auc of the test is 0.8316899619592829
+参数为 学习率 0.01 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.47148288973384034 The auc of the test is 0.833062277734409
+参数为 学习率 0.025 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.7821460242388414 The auc of the train is 0.997985813757535
+The f1 of the test is: 0.443213296398892 The auc of the test is 0.8394514454233424
+参数为 学习率 0.025 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9198751300728408 The auc of the train is 0.9996336492165718
+The f1 of the test is: 0.4981949458483755 The auc of the test is 0.8339947089947088
+参数为 学习率 0.025 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9371024734982332 The auc of the train is 0.9997989529089486
+The f1 of the test is: 0.4827586206896552 The auc of the test is 0.832675055450231
+参数为 学习率 0.025 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.494296577946768 The auc of the test is 0.8350510513859459
+参数为 学习率 0.025 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4924242424242424 The auc of the test is 0.8340504690036304
+参数为 学习率 0.05 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9208333333333334 The auc of the train is 0.999628123851105
+The f1 of the test is: 0.4768683274021352 The auc of the test is 0.8405976233845085
+参数为 学习率 0.05 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4885496183206107 The auc of the test is 0.8388582208839819
+参数为 学习率 0.05 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4885496183206107 The auc of the test is 0.8384462163736168
+参数为 学习率 0.05 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.999803373201322
+The f1 of the test is: 0.4864864864864864 The auc of the test is 0.8371575406118732
+参数为 学习率 0.05 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4864864864864864 The auc of the test is 0.8366030383009306
+参数为 学习率 0.075 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9371024734982332 The auc of the train is 0.9997991815447611
+The f1 of the test is: 0.494296577946768 The auc of the test is 0.8316342019503613
+参数为 学习率 0.075 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4787644787644788 The auc of the test is 0.8303424284103441
+参数为 学习率 0.075 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4806201550387597 The auc of the test is 0.8287780503822658
+参数为 学习率 0.075 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4806201550387597 The auc of the test is 0.8274181257202334
+参数为 学习率 0.075 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4806201550387597 The auc of the test is 0.8265879211429563
+参数为 学习率 0.1 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.46332046332046334 The auc of the test is 0.836906620571726
+参数为 学习率 0.1 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4732824427480916 The auc of the test is 0.8369561850241006
+参数为 学习率 0.1 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.47148288973384034 The auc of the test is 0.8375168828915901
+参数为 学习率 0.1 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4772727272727273 The auc of the test is 0.8370057494764754
+参数为 学习率 0.1 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.0
+The f1 of the train is: 0.9377652050919377 The auc of the train is 0.9998033732013221
+The f1 of the test is: 0.4772727272727273 The auc of the test is 0.8355559892445138
+对第3折进行自动调参
+设置迭代次数
+The f1 of the train is: 0.9441876999644508 The auc of the train is 0.9998045544863529
+The f1 of the test is: 0.4552238805970149 The auc of the test is 0.8371776761706503
+设置max_depth和num_leaves
+The f1 of the train is: 0.959884351282978 The auc of the train is 0.9999116703644698
+The f1 of the test is: 0.4227642276422765 The auc of the test is 0.8363041026975453
+max_depth is (9,),num_leaves is 140
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.4326530612244899 The auc of the test is 0.8387219186399514
+max_bin is 380,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.4326530612244899 The auc of the test is 0.8387219186399514
+feature_fraction is 1.0,bagging_fraction is 0.7,bagging_freq is 0
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.42798353909465014 The auc of the test is 0.8307885084817169
+lamda1 is 0.0,lamda2 is 0.001
+确定min_split_gain 
+The f1 of the train is: 0.9763899466869765 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.4299065420560748 The auc of the test is 0.8379722562977833
+min_split_gain为  0.0
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.47876738068395336 The auc of the train is 0.9752041222427283
+The f1 of the test is: 0.29245283018867924 The auc of the test is 0.8267598478371313
+参数为 学习率 0.01 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.6883454734651404 The auc of the train is 0.9964425601296945
+The f1 of the test is: 0.3478260869565217 The auc of the test is 0.8266715611563387
+参数为 学习率 0.01 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.8279301745635911 The auc of the train is 0.9992621350743798
+The f1 of the test is: 0.3682539682539683 The auc of the test is 0.8177561552854291
+参数为 学习率 0.01 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9462059137869612 The auc of the train is 0.9998362395993569
+The f1 of the test is: 0.40625 The auc of the test is 0.8110990297758447
+参数为 学习率 0.01 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.4377682403433476 The auc of the test is 0.8341155223473725
+参数为 学习率 0.025 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.7770290067389393 The auc of the train is 0.9984743703826997
+The f1 of the test is: 0.3626373626373627 The auc of the test is 0.8225530649418238
+参数为 学习率 0.025 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9482327740092824 The auc of the train is 0.9998398977723555
+The f1 of the test is: 0.3888888888888889 The auc of the test is 0.8170126884998079
+参数为 学习率 0.025 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9609261939218524 The auc of the train is 0.999916795617265
+The f1 of the test is: 0.4322033898305085 The auc of the test is 0.8173596396664312
+参数为 学习率 0.025 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888898
+The f1 of the test is: 0.4444444444444445 The auc of the test is 0.8320709886869138
+参数为 学习率 0.025 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888898
+The f1 of the test is: 0.435483870967742 The auc of the test is 0.8342332379217625
+参数为 学习率 0.05 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9492494639027877 The auc of the train is 0.9998407361036676
+The f1 of the test is: 0.39999999999999997 The auc of the test is 0.823013085015427
+参数为 学习率 0.05 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.45267489711934156 The auc of the test is 0.8367424383232347
+参数为 学习率 0.05 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888898
+The f1 of the test is: 0.4497991967871486 The auc of the test is 0.8381054607635404
+参数为 学习率 0.05 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888898
+The f1 of the test is: 0.44799999999999995 The auc of the test is 0.8388953942232632
+参数为 学习率 0.05 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.4347826086956523 The auc of the test is 0.8401623855370928
+参数为 学习率 0.075 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9609261939218524 The auc of the train is 0.999917062359046
+The f1 of the test is: 0.42372881355932207 The auc of the test is 0.821275231404037
+参数为 学习率 0.075 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.4380165289256199 The auc of the test is 0.8284094147677286
+参数为 学习率 0.075 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888898
+The f1 of the test is: 0.4489795918367347 The auc of the test is 0.8284156103242755
+参数为 学习率 0.075 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888898
+The f1 of the test is: 0.4471544715447155 The auc of the test is 0.8314297485843153
+参数为 学习率 0.075 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.44000000000000006 The auc of the test is 0.8322227798223114
+参数为 学习率 0.1 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.42798353909465014 The auc of the test is 0.8307916062599904
+参数为 学习率 0.1 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888898
+The f1 of the test is: 0.435483870967742 The auc of the test is 0.8357015848233647
+参数为 学习率 0.1 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888897
+The f1 of the test is: 0.44000000000000006 The auc of the test is 0.8363242382563226
+参数为 学习率 0.1 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888898
+The f1 of the test is: 0.44000000000000006 The auc of the test is 0.836863251675898
+参数为 学习率 0.1 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.001 min_split 0.0
+The f1 of the train is: 0.9612739775606225 The auc of the train is 0.9999172528888898
+The f1 of the test is: 0.44176706827309237 The auc of the test is 0.8371575406118732
+对第4折进行自动调参
+设置迭代次数
+The f1 of the train is: 0.9099656357388315 The auc of the train is 0.9994771670559572
+The f1 of the test is: 0.456953642384106 The auc of the test is 0.8450522285416898
+设置max_depth和num_leaves
+The f1 of the train is: 0.9311314125087843 The auc of the train is 0.9997436802012971
+The f1 of the test is: 0.4444444444444445 The auc of the test is 0.840160836647956
+max_depth is (9,),num_leaves is 120
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452113
+The f1 of the test is: 0.4656488549618321 The auc of the test is 0.8414526101879732
+max_bin is 460,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998069742153677
+The f1 of the test is: 0.45384615384615384 The auc of the test is 0.8433825260523152
+feature_fraction is 0.8,bagging_fraction is 0.7,bagging_freq is 0
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452114
+The f1 of the test is: 0.4351145038167939 The auc of the test is 0.8379521207390059
+lamda1 is 1e-05,lamda2 is 1e-05
+确定min_split_gain 
+The f1 of the train is: 0.9645335389360062 The auc of the train is 0.9998047259632122
+The f1 of the test is: 0.4415584415584415 The auc of the test is 0.8541658922220983
+min_split_gain为  0.0
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.4722732280572898 The auc of the train is 0.9761849127190407
+The f1 of the test is: 0.3183279742765273 The auc of the test is 0.8391587053765039
+参数为 学习率 0.01 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.6530916314874596 The auc of the train is 0.9936274435833512
+The f1 of the test is: 0.33636363636363636 The auc of the test is 0.8281476525036244
+参数为 学习率 0.01 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.7637727141620998 The auc of the train is 0.9978939021609438
+The f1 of the test is: 0.38121546961325964 The auc of the test is 0.8235257673196783
+参数为 学习率 0.01 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.8962487326799595 The auc of the train is 0.9994810919707371
+The f1 of the test is: 0.40559440559440557 The auc of the test is 0.8276303235319629
+参数为 学习率 0.01 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998068217914926
+The f1 of the test is: 0.43846153846153846 The auc of the test is 0.8395629654411856
+参数为 学习率 0.025 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.719260065288357 The auc of the train is 0.9967764446277596
+The f1 of the test is: 0.36269430051813467 The auc of the test is 0.8271873412388635
+参数为 学习率 0.025 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9044368600682594 The auc of the train is 0.9994772432678947
+The f1 of the test is: 0.42657342657342656 The auc of the test is 0.8306475595702763
+参数为 学习率 0.025 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9427250088936322 The auc of the train is 0.9997895216816864
+The f1 of the test is: 0.4461538461538462 The auc of the test is 0.8307683729229396
+参数为 学习率 0.025 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452113
+The f1 of the test is: 0.4573643410852713 The auc of the test is 0.8441848506251315
+参数为 学习率 0.025 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452113
+The f1 of the test is: 0.466403162055336 The auc of the test is 0.8543827367012379
+参数为 学习率 0.05 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9050546448087432 The auc of the train is 0.9995113862158822
+The f1 of the test is: 0.4350877192982456 The auc of the test is 0.8287486214886683
+参数为 学习率 0.05 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452114
+The f1 of the test is: 0.43846153846153846 The auc of the test is 0.8398200810378796
+参数为 学习率 0.05 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452114
+The f1 of the test is: 0.4409448818897637 The auc of the test is 0.8503649182806091
+参数为 学习率 0.05 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452113
+The f1 of the test is: 0.4627450980392157 The auc of the test is 0.8564737370357978
+参数为 学习率 0.05 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452114
+The f1 of the test is: 0.46875000000000006 The auc of the test is 0.8599990087109525
+参数为 学习率 0.075 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9433962264150944 The auc of the train is 0.9997894073637803
+The f1 of the test is: 0.450381679389313 The auc of the test is 0.8339188134270101
+参数为 学习率 0.075 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452114
+The f1 of the test is: 0.46875000000000006 The auc of the test is 0.8513964784456588
+参数为 学习率 0.075 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452113
+The f1 of the test is: 0.48818897637795283 The auc of the test is 0.8561391769822684
+参数为 学习率 0.075 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452114
+The f1 of the test is: 0.4980544747081711 The auc of the test is 0.8590479907810119
+参数为 学习率 0.075 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452114
+The f1 of the test is: 0.49420849420849416 The auc of the test is 0.8598007509014535
+参数为 学习率 0.1 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452114
+The f1 of the test is: 0.4351145038167939 The auc of the test is 0.8379521207390059
+参数为 学习率 0.1 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452113
+The f1 of the test is: 0.4669260700389105 The auc of the test is 0.8524714075065364
+参数为 学习率 0.1 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452113
+The f1 of the test is: 0.4627450980392157 The auc of the test is 0.855116910152039
+参数为 学习率 0.1 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452114
+The f1 of the test is: 0.4765625 The auc of the test is 0.8563962925789624
+参数为 学习率 0.1 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9450784593437945 The auc of the train is 0.9998071647452113
+The f1 of the test is: 0.46875000000000006 The auc of the test is 0.8568175904241478
+对第5折进行自动调参
+设置迭代次数
+The f1 of the train is: 0.8833945873705313 The auc of the train is 0.9993350508455563
+The f1 of the test is: 0.37012987012987014 The auc of the test is 0.8388071075424706
+设置max_depth和num_leaves
+The f1 of the train is: 0.9115318416523236 The auc of the train is 0.9996567033276571
+The f1 of the test is: 0.38989169675090257 The auc of the test is 0.8343246223808284
+max_depth is (9,),num_leaves is 100
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9213639526791928 The auc of the train is 0.999718149202244
+The f1 of the test is: 0.4237918215613383 The auc of the test is 0.8399951055103281
+max_bin is 480,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9173036831132731 The auc of the train is 0.9996804623991641
+The f1 of the test is: 0.4351145038167939 The auc of the test is 0.838080678537353
+feature_fraction is 0.9,bagging_fraction is 0.9,bagging_freq is 16
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9173036831132731 The auc of the train is 0.9996804623991641
+The f1 of the test is: 0.4351145038167939 The auc of the test is 0.838080678537353
+lamda1 is 0.0,lamda2 is 0.0
+确定min_split_gain 
+The f1 of the train is: 0.9598470363288719 The auc of the train is 0.9997061077161233
+The f1 of the test is: 0.43668122270742354 The auc of the test is 0.8457445819857997
+min_split_gain为  0.0
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1475 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.5659722222222222 The auc of the train is 0.9874472460968818
+The f1 of the test is: 0.3391812865497076 The auc of the test is 0.8373217228603645
+参数为 学习率 0.01 迭代次数 2950 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.768782760629004 The auc of the train is 0.9978361335123399
+The f1 of the test is: 0.375 The auc of the test is 0.8474607511492758
+参数为 学习率 0.01 迭代次数 4425 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.8512556342562783 The auc of the train is 0.9990268307174348
+The f1 of the test is: 0.37920489296636084 The auc of the test is 0.843786786116997
+参数为 学习率 0.01 迭代次数 7375 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9108433734939759 The auc of the train is 0.9995500637741493
+The f1 of the test is: 0.4109589041095891 The auc of the test is 0.8448431285082338
+参数为 学习率 0.01 迭代次数 14750 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9156876295784381 The auc of the train is 0.999689988891348
+The f1 of the test is: 0.38989169675090257 The auc of the test is 0.8274583968377879
+参数为 学习率 0.025 迭代次数 1475 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.8060975609756098 The auc of the train is 0.9984434283360861
+The f1 of the test is: 0.3844011142061281 The auc of the test is 0.8374487317695749
+参数为 学习率 0.025 迭代次数 2950 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9068493150684931 The auc of the train is 0.9995538362650542
+The f1 of the test is: 0.4027777777777778 The auc of the test is 0.8441058572791593
+参数为 学习率 0.025 迭代次数 4425 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9213091922005571 The auc of the train is 0.9996663250847629
+The f1 of the test is: 0.40579710144927533 The auc of the test is 0.8341495979083801
+参数为 学习率 0.025 迭代次数 7375 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9225401256106072 The auc of the train is 0.9996880835929112
+The f1 of the test is: 0.4044117647058824 The auc of the test is 0.8297817305428548
+参数为 学习率 0.025 迭代次数 14750 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9225941422594143 The auc of the train is 0.9996932278986905
+The f1 of the test is: 0.39285714285714285 The auc of the test is 0.8130258478619135
+参数为 学习率 0.05 迭代次数 1475 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9061643835616437 The auc of the train is 0.9995549413381475
+The f1 of the test is: 0.4206896551724138 The auc of the test is 0.8446944351511096
+参数为 学习率 0.05 迭代次数 2950 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9244755244755245 The auc of the train is 0.9997003918208128
+The f1 of the test is: 0.4280442804428044 The auc of the test is 0.833715908950101
+参数为 学习率 0.05 迭代次数 4425 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9238294898672258 The auc of the train is 0.9996909034345975
+The f1 of the test is: 0.4075471698113207 The auc of the test is 0.8219443515110962
+参数为 学习率 0.05 迭代次数 7375 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9226461323066154 The auc of the train is 0.9996759658948531
+The f1 of the test is: 0.40875912408759124 The auc of the test is 0.815392550462808
+参数为 学习率 0.05 迭代次数 14750 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9240993354319692 The auc of the train is 0.999677299603759
+The f1 of the test is: 0.3840579710144928 The auc of the test is 0.7979830365661749
+参数为 学习率 0.075 迭代次数 1475 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9162049861495846 The auc of the train is 0.9996613332028585
+The f1 of the test is: 0.41328413284132837 The auc of the test is 0.8380775807590796
+参数为 学习率 0.075 迭代次数 2950 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9247462373118656 The auc of the train is 0.9996889219242233
+The f1 of the test is: 0.411764705882353 The auc of the test is 0.821114146933819
+参数为 学习率 0.075 迭代次数 4425 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9236694677871148 The auc of the train is 0.9996850351154123
+The f1 of the test is: 0.42066420664206633 The auc of the test is 0.8086548827181146
+参数为 学习率 0.075 迭代次数 7375 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9223233030090973 The auc of the train is 0.9996675444757623
+The f1 of the test is: 0.4071428571428571 The auc of the test is 0.8101263273979902
+参数为 学习率 0.075 迭代次数 14750 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.10627306273062732 The auc of the train is 0.5230962562867227
+The f1 of the test is: 0.09771986970684039 The auc of the test is 0.5171678871913064
+参数为 学习率 0.1 迭代次数 1475 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9172461752433936 The auc of the train is 0.9996740987023851
+The f1 of the test is: 0.4328358208955224 The auc of the test is 0.8400074966234217
+参数为 学习率 0.1 迭代次数 2950 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9262640449438201 The auc of the train is 0.9996911701763788
+The f1 of the test is: 0.4237918215613383 The auc of the test is 0.8267954722872756
+参数为 学习率 0.1 迭代次数 4425 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.14361702127659576 The auc of the train is 0.5874212654473976
+The f1 of the test is: 0.14070956103427543 The auc of the test is 0.5789143526262964
+参数为 学习率 0.1 迭代次数 7375 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.14361702127659576 The auc of the train is 0.5874212654473976
+The f1 of the test is: 0.14070956103427543 The auc of the test is 0.5789143526262964
+参数为 学习率 0.1 迭代次数 14750 深度与叶子数量 (9,) 100 max_bin与min_data_in_leaf 480 10 feature_fraction,bagging_fraction,bagging_freq 0.9 0.9 16 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.14361702127659576 The auc of the train is 0.5874212654473976
+The f1 of the test is: 0.14070956103427543 The auc of the test is 0.5789143526262964
+对第6折进行自动调参
+设置迭代次数
+The f1 of the train is: 0.8922558922558923 The auc of the train is 0.9994623057281502
+The f1 of the test is: 0.3655913978494624 The auc of the test is 0.8236914984573064
+设置max_depth和num_leaves
+The f1 of the train is: 0.9301018616087109 The auc of the train is 0.9997155198904011
+The f1 of the test is: 0.39999999999999997 The auc of the test is 0.8213960447567006
+max_depth is (9,),num_leaves is 120
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.401673640167364 The auc of the test is 0.824829931972789
+max_bin is 460,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.401673640167364 The auc of the test is 0.824829931972789
+feature_fraction is 1.0,bagging_fraction is 0.7,bagging_freq is 0
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.38683127572016457 The auc of the test is 0.8162521839336827
+lamda1 is 1e-05,lamda2 is 1e-05
+确定min_split_gain 
+The f1 of the train is: 0.963678516228748 The auc of the train is 0.9997896550525771
+The f1 of the test is: 0.42790697674418604 The auc of the test is 0.8292070926731349
+min_split_gain为  0.0
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1450 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.47683361470643404 The auc of the train is 0.9755594794541762
+The f1 of the test is: 0.2947019867549669 The auc of the test is 0.8287625614908987
+参数为 学习率 0.01 迭代次数 2900 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.6754047802621435 The auc of the train is 0.9941903830594885
+The f1 of the test is: 0.34259259259259256 The auc of the test is 0.8219613892916
+参数为 学习率 0.01 迭代次数 4350 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.7869047619047618 The auc of the train is 0.9982025033487525
+The f1 of the test is: 0.3667621776504298 The auc of the test is 0.8232624561664375
+参数为 学习率 0.01 迭代次数 7250 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9034459228932105 The auc of the train is 0.9995135773090845
+The f1 of the test is: 0.3809523809523809 The auc of the test is 0.819569904464518
+参数为 学习率 0.01 迭代次数 14500 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.42063492063492064 The auc of the test is 0.8196597400344472
+参数为 学习率 0.025 迭代次数 1450 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.7433728144388042 The auc of the train is 0.9970970491957203
+The f1 of the test is: 0.3573333333333334 The auc of the test is 0.8249027297622146
+参数为 学习率 0.025 迭代次数 2900 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9028960817717206 The auc of the train is 0.9994953626560287
+The f1 of the test is: 0.40875912408759124 The auc of the test is 0.81859410430839
+参数为 学习率 0.025 迭代次数 4350 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9390070921985816 The auc of the train is 0.9997853490781099
+The f1 of the test is: 0.4129554655870446 The auc of the test is 0.8193933311029329
+参数为 学习率 0.025 迭代次数 7250 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.425 The auc of the test is 0.8311060307547428
+参数为 学习率 0.025 迭代次数 14500 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.425531914893617 The auc of the test is 0.8295075771656568
+参数为 学习率 0.05 迭代次数 1450 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9131034482758621 The auc of the train is 0.9995490158600091
+The f1 of the test is: 0.42105263157894735 The auc of the test is 0.8204341846028027
+参数为 学习率 0.05 迭代次数 2900 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897312645145
+The f1 of the test is: 0.41463414634146345 The auc of the test is 0.8207005935343172
+参数为 学习率 0.05 迭代次数 4350 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.42448979591836733 The auc of the test is 0.8226367049552061
+参数为 学习率 0.05 迭代次数 7250 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.4197530864197531 The auc of the test is 0.8204868468334511
+参数为 学习率 0.05 迭代次数 14500 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.42148760330578505 The auc of the test is 0.8199044645180478
+参数为 学习率 0.075 迭代次数 1450 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9393401915572898 The auc of the train is 0.999786911422828
+The f1 of the test is: 0.4032921810699588 The auc of the test is 0.8187087221045067
+参数为 学习率 0.075 迭代次数 2900 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.41176470588235287 The auc of the test is 0.8276210301971426
+参数为 学习率 0.075 迭代次数 4350 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.4232365145228215 The auc of the test is 0.8246657497242976
+参数为 学习率 0.075 迭代次数 7250 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704833
+The f1 of the test is: 0.42148760330578505 The auc of the test is 0.8220047581874279
+参数为 学习率 0.075 迭代次数 14500 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704833
+The f1 of the test is: 0.42622950819672123 The auc of the test is 0.8205549979554664
+参数为 学习率 0.1 迭代次数 1450 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.38683127572016457 The auc of the test is 0.8162521839336827
+参数为 学习率 0.1 迭代次数 2900 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.4 The auc of the test is 0.8209484157961909
+参数为 学习率 0.1 迭代次数 4350 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.3983402489626555 The auc of the test is 0.821183846944971
+参数为 学习率 0.1 迭代次数 7250 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.4032921810699588 The auc of the test is 0.8208214068869807
+参数为 学习率 0.1 迭代次数 14500 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 460 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 1e-05 1e-05 min_split 0.0
+The f1 of the train is: 0.9396735273243435 The auc of the train is 0.9997897693704834
+The f1 of the test is: 0.4016393442622951 The auc of the test is 0.8192353444109883
+对第7折进行自动调参
+设置迭代次数
+The f1 of the train is: 0.8854655056932351 The auc of the train is 0.9993065749182415
+The f1 of the test is: 0.40138408304498274 The auc of the test is 0.8276780767099674
+设置max_depth和num_leaves
+The f1 of the train is: 0.9153128240580711 The auc of the train is 0.9996518098148678
+The f1 of the test is: 0.45210727969348663 The auc of the test is 0.8256464323093025
+max_depth is (9,),num_leaves is 140
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9210434782608696 The auc of the train is 0.9996881121975472
+The f1 of the test is: 0.4516129032258065 The auc of the test is 0.8236825093886596
+max_bin is 380,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9210434782608696 The auc of the train is 0.9996881121975472
+The f1 of the test is: 0.4516129032258065 The auc of the test is 0.8236825093886596
+feature_fraction is 1.0,bagging_fraction is 0.7,bagging_freq is 0
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9210434782608696 The auc of the train is 0.9996881121975473
+The f1 of the test is: 0.47104247104247104 The auc of the test is 0.8259758049621375
+lamda1 is 0.001,lamda2 is 0.001
+确定min_split_gain 
+The f1 of the train is: 0.7733333333333334 The auc of the train is 0.9923733918177937
+The f1 of the test is: 0.36269430051813467 The auc of the test is 0.8665363541217757
+min_split_gain为  0.1
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.4566193641099335 The auc of the train is 0.9725060167767343
+The f1 of the test is: 0.3044189852700491 The auc of the test is 0.8474019577664224
+参数为 学习率 0.01 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.6408193123628383 The auc of the train is 0.9936114670380085
+The f1 of the test is: 0.3427230046948357 The auc of the test is 0.8327371790925322
+参数为 学习率 0.01 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.7690517742873764 The auc of the train is 0.9980281933760812
+The f1 of the test is: 0.38823529411764707 The auc of the test is 0.8298821030597796
+参数为 学习率 0.01 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8409669211195929 The auc of the train is 0.9988810324397634
+The f1 of the test is: 0.40259740259740256 The auc of the test is 0.8310241334728807
+参数为 学习率 0.01 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8409669211195929 The auc of the train is 0.9988810324397634
+The f1 of the test is: 0.40259740259740256 The auc of the test is 0.8310241334728807
+参数为 学习率 0.025 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.7038718291054741 The auc of the train is 0.9965965372255385
+The f1 of the test is: 0.3674540682414698 The auc of the test is 0.8275872683617559
+参数为 学习率 0.025 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8293601003764116 The auc of the train is 0.9988064638375265
+The f1 of the test is: 0.41486068111455104 The auc of the test is 0.8235332143077019
+参数为 学习率 0.025 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8293601003764116 The auc of the train is 0.9988064638375265
+The f1 of the test is: 0.41486068111455104 The auc of the test is 0.8235332143077019
+参数为 学习率 0.025 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8293601003764116 The auc of the train is 0.9988064638375265
+The f1 of the test is: 0.41486068111455104 The auc of the test is 0.8235332143077019
+参数为 学习率 0.025 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8293601003764116 The auc of the train is 0.9988064638375265
+The f1 of the test is: 0.41486068111455104 The auc of the test is 0.8235332143077019
+参数为 学习率 0.05 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8343325970337646 The auc of the train is 0.9988736728180647
+The f1 of the test is: 0.40384615384615385 The auc of the test is 0.8254494243674199
+参数为 学习率 0.05 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8343325970337646 The auc of the train is 0.9988736728180647
+The f1 of the test is: 0.40384615384615385 The auc of the test is 0.8254494243674199
+参数为 学习率 0.05 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8343325970337646 The auc of the train is 0.9988736728180647
+The f1 of the test is: 0.40384615384615385 The auc of the test is 0.8254494243674199
+参数为 学习率 0.05 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8343325970337646 The auc of the train is 0.9988736728180647
+The f1 of the test is: 0.40384615384615385 The auc of the test is 0.8254494243674199
+参数为 学习率 0.05 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8343325970337646 The auc of the train is 0.9988736728180647
+The f1 of the test is: 0.40384615384615385 The auc of the test is 0.8254494243674199
+参数为 学习率 0.075 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8447284345047924 The auc of the train is 0.9989178114818792
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8386335652280983
+参数为 学习率 0.075 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8447284345047924 The auc of the train is 0.9989178114818792
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8386335652280983
+参数为 学习率 0.075 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8447284345047924 The auc of the train is 0.9989178114818792
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8386335652280983
+参数为 学习率 0.075 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8447284345047924 The auc of the train is 0.9989178114818792
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8386335652280983
+参数为 学习率 0.075 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8447284345047924 The auc of the train is 0.9989178114818792
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8386335652280983
+参数为 学习率 0.1 迭代次数 1450 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8584415584415584 The auc of the train is 0.9990729164624975
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8413177984362494
+参数为 学习率 0.1 迭代次数 2900 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8584415584415584 The auc of the train is 0.9990729164624975
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8413177984362494
+参数为 学习率 0.1 迭代次数 4350 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8584415584415584 The auc of the train is 0.9990729164624975
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8413177984362494
+参数为 学习率 0.1 迭代次数 7250 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8584415584415584 The auc of the train is 0.9990729164624975
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8413177984362494
+参数为 学习率 0.1 迭代次数 14500 深度与叶子数量 (9,) 140 max_bin与min_data_in_leaf 380 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.001 0.001 min_split 0.1
+The f1 of the train is: 0.8584415584415584 The auc of the train is 0.9990729164624975
+The f1 of the test is: 0.44155844155844154 The auc of the test is 0.8413177984362494
+对第8折进行自动调参
+设置迭代次数
+The f1 of the train is: 0.88 The auc of the train is 0.9992450667845629
+The f1 of the test is: 0.3846153846153847 The auc of the test is 0.7970987502308686
+设置max_depth和num_leaves
+The f1 of the train is: 0.9124137931034483 The auc of the train is 0.9996271951215698
+The f1 of the test is: 0.4 The auc of the test is 0.7937526934679554
+max_depth is (9,),num_leaves is 120
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.4092664092664093 The auc of the test is 0.8039971064458535
+max_bin is 400,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.4092664092664093 The auc of the test is 0.8039971064458535
+feature_fraction is 1.0,bagging_fraction is 0.7,bagging_freq is 0
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.4092664092664093 The auc of the test is 0.8039971064458535
+lamda1 is 0.0,lamda2 is 0.0
+确定min_split_gain 
+The f1 of the train is: 0.9568932038834952 The auc of the train is 0.9996960819433245
+The f1 of the test is: 0.4072398190045249 The auc of the test is 0.8088114880256111
+min_split_gain为  0.0
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.45754461871281776 The auc of the train is 0.9734818339750186
+The f1 of the test is: 0.29102167182662536 The auc of the test is 0.8207735639967986
+参数为 学习率 0.01 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.665313372240548 The auc of the train is 0.9938542201557998
+The f1 of the test is: 0.3191011235955056 The auc of the test is 0.8101135873914915
+参数为 学习率 0.01 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.7806757557794902 The auc of the train is 0.9977487184153064
+The f1 of the test is: 0.3707865168539326 The auc of the test is 0.8031475096964846
+参数为 学习率 0.01 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.8937753721244925 The auc of the train is 0.9993168898284461
+The f1 of the test is: 0.4014084507042254 The auc of the test is 0.7921027519546882
+参数为 学习率 0.01 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.4015444015444015 The auc of the test is 0.7942144308317429
+参数为 学习率 0.025 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.7356963438459393 The auc of the train is 0.9967751701159396
+The f1 of the test is: 0.35678391959798994 The auc of the test is 0.8127855076032752
+参数为 学习率 0.025 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.8946833728411785 The auc of the train is 0.99929931062843
+The f1 of the test is: 0.3890784982935154 The auc of the test is 0.7985147448131503
+参数为 学习率 0.025 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9200278164116829 The auc of the train is 0.9996723633697671
+The f1 of the test is: 0.41666666666666663 The auc of the test is 0.8002047035646125
+参数为 学习率 0.025 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726088
+The f1 of the test is: 0.4 The auc of the test is 0.801214369266761
+参数为 学习率 0.025 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.4046692607003891 The auc of the test is 0.8061180200701841
+参数为 学习率 0.05 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.8998637602179836 The auc of the train is 0.999396739817239
+The f1 of the test is: 0.3986013986013986 The auc of the test is 0.8012513082558641
+参数为 学习率 0.05 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.4031007751937985 The auc of the test is 0.7938081019516099
+参数为 学习率 0.05 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726088
+The f1 of the test is: 0.3937007874015748 The auc of the test is 0.8002354860555317
+参数为 学习率 0.05 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.40157480314960636 The auc of the test is 0.8030582404728192
+参数为 学习率 0.05 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726088
+The f1 of the test is: 0.4 The auc of the test is 0.8042803053623099
+参数为 学习率 0.075 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9200278164116829 The auc of the train is 0.9996815533637018
+The f1 of the test is: 0.41509433962264153 The auc of the test is 0.7979021732438588
+参数为 学习率 0.075 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.3937007874015748 The auc of the test is 0.8041787231422768
+参数为 学习率 0.075 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.39843749999999994 The auc of the test is 0.8040802191713354
+参数为 学习率 0.075 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.39534883720930236 The auc of the test is 0.8048374684479469
+参数为 学习率 0.075 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726088
+The f1 of the test is: 0.4015444015444015 The auc of the test is 0.8054992920027089
+参数为 学习率 0.1 迭代次数 1475 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.4092664092664093 The auc of the test is 0.8039971064458535
+参数为 学习率 0.1 迭代次数 2950 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.4108527131782946 The auc of the test is 0.806856799852244
+参数为 学习率 0.1 迭代次数 4425 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.4108527131782946 The auc of the test is 0.8064227667302838
+参数为 学习率 0.1 迭代次数 7375 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726088
+The f1 of the test is: 0.41379310344827586 The auc of the test is 0.8058563688973711
+参数为 学习率 0.1 迭代次数 14750 深度与叶子数量 (9,) 120 max_bin与min_data_in_leaf 400 10 feature_fraction,bagging_fraction,bagging_freq 1.0 0.7 0 lamda1,lamda2 0.0 0.0 min_split 0.0
+The f1 of the train is: 0.9222725688393169 The auc of the train is 0.9996963488726089
+The f1 of the test is: 0.41064638783269963 The auc of the test is 0.8073862586960536
+对第9折进行自动调参!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+设置迭代次数
+The f1 of the train is: 0.8950575490859851 The auc of the train is 0.9993980172645285
+The f1 of the test is: 0.45890410958904104 The auc of the test is 0.8250261651172812
+设置max_depth和num_leaves
+The f1 of the train is: 0.9247988807275273 The auc of the train is 0.999668149700349
+The f1 of the test is: 0.46096654275092935 The auc of the test is 0.823117650680293
+max_depth is (9,),num_leaves is 90
+确定min_data_in_leaf和max_bin_in
+The f1 of the train is: 0.9326278659611994 The auc of the train is 0.9997207919685096
+The f1 of the test is: 0.45925925925925926 The auc of the test is 0.8318537216031521
+max_bin is 440,min_data_in_deaf is 10
+确定feature_fraction、bagging_fraction、bagging_freq
+The f1 of the train is: 0.9326278659611994 The auc of the train is 0.9997205250392254
+The f1 of the test is: 0.46037735849056605 The auc of the test is 0.8296466170042479
+feature_fraction is 0.8,bagging_fraction is 0.7,bagging_freq is 0
+确定lambda_l1和lambda_l2
+The f1 of the train is: 0.9326278659611994 The auc of the train is 0.9997207919685096
+The f1 of the test is: 0.47191011235955055 The auc of the test is 0.8339500092347474
+lamda1 is 1e-05,lamda2 is 0.0
+确定min_split_gain 
+The f1 of the train is: 0.7807780320366133 The auc of the train is 0.9929244482590758
+The f1 of the test is: 0.3283582089552239 The auc of the test is 0.8501292864618606
+min_split_gain为  0.1
+调低学习率，增加迭代次数并验证模型效果
+参数为 学习率 0.01 迭代次数 1475 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.47462022971470913 The auc of the train is 0.9760334682038032
+The f1 of the test is: 0.32148900169204736 The auc of the test is 0.8307670996737055
+参数为 学习率 0.01 迭代次数 2950 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.6540849267444748 The auc of the train is 0.9941518844406692
+The f1 of the test is: 0.3594470046082949 The auc of the test is 0.8185310595333374
+参数为 学习率 0.01 迭代次数 4425 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.7583237657864522 The auc of the train is 0.997802561865247
+The f1 of the test is: 0.3646112600536193 The auc of the test is 0.8141876500646432
+参数为 学习率 0.01 迭代次数 7375 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8115408225905463 The auc of the train is 0.9987107315563114
+The f1 of the test is: 0.37463976945244953 The auc of the test is 0.8180293049313551
+参数为 学习率 0.01 迭代次数 14750 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8115408225905463 The auc of the train is 0.9987107315563114
+The f1 of the test is: 0.37463976945244953 The auc of the test is 0.8180293049313551
+参数为 学习率 0.025 迭代次数 1475 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.7245739417262231 The auc of the train is 0.9968156289689047
+The f1 of the test is: 0.36548223350253806 The auc of the test is 0.8147448131502801
+参数为 学习率 0.025 迭代次数 2950 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8093051729415366 The auc of the train is 0.9985894312629255
+The f1 of the test is: 0.38840579710144935 The auc of the test is 0.8178015144985531
+参数为 学习率 0.025 迭代次数 4425 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8093051729415366 The auc of the train is 0.9985894312629255
+The f1 of the test is: 0.38840579710144935 The auc of the test is 0.8178015144985531
+参数为 学习率 0.025 迭代次数 7375 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8093051729415366 The auc of the train is 0.9985894312629255
+The f1 of the test is: 0.38840579710144935 The auc of the test is 0.8178015144985531
+参数为 学习率 0.025 迭代次数 14750 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8093051729415366 The auc of the train is 0.9985894312629255
+The f1 of the test is: 0.38840579710144935 The auc of the test is 0.8178015144985531
+参数为 学习率 0.05 迭代次数 1475 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8304020100502513 The auc of the train is 0.9988061015763547
+The f1 of the test is: 0.37724550898203596 The auc of the test is 0.8268761928215231
+参数为 学习率 0.05 迭代次数 2950 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8304020100502513 The auc of the train is 0.9988061015763547
+The f1 of the test is: 0.37724550898203596 The auc of the test is 0.8268761928215231
+参数为 学习率 0.05 迭代次数 4425 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8304020100502513 The auc of the train is 0.9988061015763547
+The f1 of the test is: 0.37724550898203596 The auc of the test is 0.8268761928215231
+参数为 学习率 0.05 迭代次数 7375 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8304020100502513 The auc of the train is 0.9988061015763547
+The f1 of the test is: 0.37724550898203596 The auc of the test is 0.8268761928215231
+参数为 学习率 0.05 迭代次数 14750 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8304020100502513 The auc of the train is 0.9988061015763547
+The f1 of the test is: 0.37724550898203596 The auc of the test is 0.8268761928215231
+参数为 学习率 0.075 迭代次数 1475 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.836283185840708 The auc of the train is 0.9988162639555397
+The f1 of the test is: 0.41590214067278286 The auc of the test is 0.8276057378563073
+参数为 学习率 0.075 迭代次数 2950 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.836283185840708 The auc of the train is 0.9988162639555397
+The f1 of the test is: 0.41590214067278286 The auc of the test is 0.8276057378563073
+参数为 学习率 0.075 迭代次数 4425 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.836283185840708 The auc of the train is 0.9988162639555397
+The f1 of the test is: 0.41590214067278286 The auc of the test is 0.8276057378563073
+参数为 学习率 0.075 迭代次数 7375 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.836283185840708 The auc of the train is 0.9988162639555397
+The f1 of the test is: 0.41590214067278286 The auc of the test is 0.8276057378563073
+参数为 学习率 0.075 迭代次数 14750 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.836283185840708 The auc of the train is 0.9988162639555397
+The f1 of the test is: 0.41590214067278286 The auc of the test is 0.8276057378563073
+参数为 学习率 0.1 迭代次数 1475 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8374009508716322 The auc of the train is 0.9988805176475721
+The f1 of the test is: 0.4268292682926829 The auc of the test is 0.8221972542018101
+参数为 学习率 0.1 迭代次数 2950 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8374009508716322 The auc of the train is 0.9988805176475721
+The f1 of the test is: 0.4268292682926829 The auc of the test is 0.8221972542018101
+参数为 学习率 0.1 迭代次数 4425 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8374009508716322 The auc of the train is 0.9988805176475721
+The f1 of the test is: 0.4268292682926829 The auc of the test is 0.8221972542018101
+参数为 学习率 0.1 迭代次数 7375 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8374009508716322 The auc of the train is 0.9988805176475721
+The f1 of the test is: 0.4268292682926829 The auc of the test is 0.8221972542018101
+参数为 学习率 0.1 迭代次数 14750 深度与叶子数量 (9,) 90 max_bin与min_data_in_leaf 440 10 feature_fraction,bagging_fraction,bagging_freq 0.8 0.7 0 lamda1,lamda2 1e-05 0.0 min_split 0.1
+The f1 of the train is: 0.8374009508716322 The auc of the train is 0.9988805176475721
+The f1 of the test is: 0.4268292682926829 The auc of the test is 0.8221972542018101
