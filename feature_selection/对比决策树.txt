@@ -13,6 +13,7 @@ The f1 of the test is: 0.3765432098765432 The auc of the test is 0.6921040729588
 对第4折进行验证
 The f1 of the train is: 0.9667182662538701 The auc of the train is 0.9998369255067941
 The f1 of the test is: 0.3973509933774835 The auc of the test is 0.6952374756824405
+
 对第5折进行验证
 The f1 of the train is: 0.9643687064291248 The auc of the train is 0.9997925130002323
 The f1 of the test is: 0.3588039867109635 The auc of the test is 0.6655204887055004

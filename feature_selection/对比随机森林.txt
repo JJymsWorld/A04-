@@ -1,0 +1,30 @@
+对第0折进行验证
+The f1 of the train is: 0.9655436447166922 The auc of the train is 0.9991929938042196
+The f1 of the test is: 0.37623762376237624 The auc of the test is 0.8526667035888348
+对第1折进行验证
+The f1 of the train is: 0.9701149425287356 The auc of the train is 0.9992422256820549
+The f1 of the test is: 0.33492822966507174 The auc of the test is 0.8398424038792891
+对第2折进行验证
+The f1 of the train is: 0.9701149425287358 The auc of the train is 0.9993136352911266
+The f1 of the test is: 0.42592592592592593 The auc of the test is 0.8297631438732141
+对第3折进行验证
+The f1 of the train is: 0.979498861047836 The auc of the train is 0.9998295901078124
+The f1 of the test is: 0.3877551020408163 The auc of the test is 0.8381891007769228
+对第4折进行验证
+The f1 of the train is: 0.9669485011529594 The auc of the train is 0.9993050042892078
+The f1 of the test is: 0.39069767441860465 The auc of the test is 0.8625097580015613
+对第5折进行验证
+The f1 of the train is: 0.9645608628659477 The auc of the train is 0.9991161320551677
+The f1 of the test is: 0.38277511961722493 The auc of the test is 0.7894749885382204
+对第6折进行验证
+The f1 of the train is: 0.9667440061871617 The auc of the train is 0.9992870754309175
+The f1 of the test is: 0.3592233009708738 The auc of the test is 0.8057987311500192
+对第7折进行验证
+The f1 of the train is: 0.9637065637065637 The auc of the train is 0.9992044554005781
+The f1 of the test is: 0.3942307692307693 The auc of the test is 0.8375869605368468
+对第8折进行验证
+The f1 of the train is: 0.9622205088666153 The auc of the train is 0.9991215166586371
+The f1 of the test is: 0.37864077669902907 The auc of the test is 0.8359801145108662
+对第9折进行验证
+The f1 of the train is: 0.9628482972136223 The auc of the train is 0.9992022055680382
+The f1 of the test is: 0.410958904109589 The auc of the test is 0.8489118389460076

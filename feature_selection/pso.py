@@ -234,9 +234,6 @@ class PSO:
         return
 
 
-
-
-
 def testParameters(x_train, x_test, y_train, y_test, clf, file):
     ## 在训练集和测试集上分布利用训练好的模型进行预测
     train_predict = clf.predict(x_train)
@@ -447,8 +444,8 @@ def GridSearchSelf(x_train, x_test, y_train, y_test, file):
 
 
 def testBaseline(x_train, x_test, y_train, y_test, file):
-    from sklearn.tree import DecisionTreeClassifier
-    clf = DecisionTreeClassifier(random_state=0)
+    from sklearn.ensemble import RandomForestClassifier
+    clf = RandomForestClassifier(n_estimators=500, random_state=0)
     clf.fit(x_train, y_train)
     ## 在训练集和测试集上分布利用训练好的模型进行预测
     train_predict = clf.predict(x_train)
@@ -477,19 +474,7 @@ if __name__ == "__main__":
     X_train, X_test = minmax_target(X_train, X_test, Y_train, continue_list, discrete_list)
     # # 模型交叉验证！
     del train, test, X_test
-    file = open('is_unbalance.txt', 'a')
-    kfold = StratifiedKFold(n_splits=10, random_state=0, shuffle=True)
-    for k, (train_index, test_index) in enumerate(kfold.split(X_train, Y_train)):
-        feature_subset = list(set(feature_subset_list[k]))
-        x_train = X_train.loc[train_index][feature_subset]
-        x_test = X_train.loc[test_index][feature_subset]
-        y_train = Y_train.loc[train_index]
-        y_test = Y_train.loc[test_index]
-        # 对获得的9折训练集交叉验证训练模型，对10%的验证集计算结果，并对10折情况进行平均查看f1值
-        print('对第{0}折进行自动调参'.format(k), file=file)
-        GridSearchSelf(x_train, x_test, y_train, y_test, file)
-    file.close()
-    # file = open('对比决策树.txt', 'a')
+    # file = open('is_unbalance.txt', 'a')
     # kfold = StratifiedKFold(n_splits=10, random_state=0, shuffle=True)
     # for k, (train_index, test_index) in enumerate(kfold.split(X_train, Y_train)):
     #     feature_subset = list(set(feature_subset_list[k]))
@@ -498,9 +483,21 @@ if __name__ == "__main__":
     #     y_train = Y_train.loc[train_index]
     #     y_test = Y_train.loc[test_index]
     #     # 对获得的9折训练集交叉验证训练模型，对10%的验证集计算结果，并对10折情况进行平均查看f1值
-    #     print('对第{0}折进行验证'.format(k), file=file)
-    #     testBaseline(x_train, x_test, y_train, y_test, file)
+    #     print('对第{0}折进行自动调参'.format(k), file=file)
+    #     GridSearchSelf(x_train, x_test, y_train, y_test, file)
     # file.close()
+    file = open('对比随机森林.txt', 'a')
+    kfold = StratifiedKFold(n_splits=10, random_state=0, shuffle=True)
+    for k, (train_index, test_index) in enumerate(kfold.split(X_train, Y_train)):
+        feature_subset = list(set(feature_subset_list[k]))
+        x_train = X_train.loc[train_index][feature_subset]
+        x_test = X_train.loc[test_index][feature_subset]
+        y_train = Y_train.loc[train_index]
+        y_test = Y_train.loc[test_index]
+        # 对获得的9折训练集交叉验证训练模型，对10%的验证集计算结果，并对10折情况进行平均查看f1值
+        print('对第{0}折进行验证'.format(k), file=file)
+        testBaseline(x_train, x_test, y_train, y_test, file)
+    file.close()
 
     # # getTopN(feature_subset_list, 70)  # 前68个，其实相差不大
 

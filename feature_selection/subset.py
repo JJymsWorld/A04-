@@ -9,33 +9,32 @@ from numpy.linalg import LinAlgError
 import scipy.stats as stats
 from sklearn.model_selection import train_test_split, StratifiedKFold
 from passenger_identify.base import reduce_mem_usage, read_csv, datapath, drop_features, tmppath, \
-    Box_Cox, train_drop_features, getTrainTest, minmax_target, combine_feature, auto_feature_make, xgb_clf, lgb_clf, \
+    Box_Cox, train_drop_features, getTrainTest, minmax_target, combine_feature, auto_feature_make, \
     getTrainTest_np
 from passenger_identify.base import evaluation
 
-train = reduce_mem_usage(read_csv(tmppath + 'sub/combine_feature_train.csv'))
-test = reduce_mem_usage(read_csv(tmppath + 'sub/combine_feature_test.csv'))
+train = reduce_mem_usage(read_csv(tmppath + 'BOX_train.csv'))
+test = reduce_mem_usage(read_csv(tmppath + 'BOX_test.csv'))
 
-X_train = train.drop(['emd_lable2'], axis=1)  # 去除部分取值过多的离散型特征
-Y_train = train['emd_lable2'].astype(int)
+# X_train = train.drop(['emd_lable2'], axis=1)  # 去除部分取值过多的离散型特征
+# Y_train = train['emd_lable2']
+#
+# discrete_list = ['seg_flight', 'seg_cabin', 'pref_orig_m6_2', 'pref_line_y1_2',
+#                  'pref_line_y1_3', 'pref_line_y2_2', 'pref_line_y2_3', 'pref_line_y3_3'
+#     , 'pref_line_y3_4', 'pref_line_y3_5', 'pref_aircraft_y3_3', 'pref_city_y1_2',
+#                  'pref_city_y3_4', 'pref_dest_city_m6', 'pref_dest_city_y3'
+#     , 'pref_month_y3_1', 'seg_dep_time_month']  #
+# feature_list = X_train.columns.tolist()
+# continue_list = list(set(feature_list) - set(discrete_list))
 
-discrete_list = ['seg_flight', 'seg_cabin', 'pref_orig_m6_2', 'pref_line_y1_2',
-                 'pref_line_y1_3', 'pref_line_y2_2', 'pref_line_y2_3', 'pref_line_y3_3'
-    , 'pref_line_y3_4', 'pref_line_y3_5', 'pref_aircraft_y3_3', 'pref_city_y1_2',
-                 'pref_city_y3_4', 'pref_dest_city_m6', 'pref_dest_city_y3'
-    , 'pref_month_y3_1', 'seg_dep_time_month']  #
-feature_list = X_train.columns.tolist()
-continue_list = list(set(feature_list) - set(discrete_list))
-
-X_train, test = minmax_target(X_train, test, Y_train, continue_list, discrete_list)  # 离散值编码与连续特征归一化
-
-X_train = X_train.values
-Y_train = Y_train.values
-del test, train
-x_train, x_test, y_train, y_test = getTrainTest_np(X_train, Y_train)  # 线下验证，80%训练集，20%验证集
-
-evaluation(x_train, x_test, y_train, y_test, 'temp')
-
+# X_train, test = minmax_target(X_train, test, Y_train, continue_list, discrete_list)  # 离散值编码与连续特征归一化
+# #
+# # X_train = X_train.values
+# # Y_train = Y_train.values
+# # del test, train
+# # x_train, x_test, y_train, y_test = getTrainTest_np(X_train, Y_train)  # 线下验证，80%训练集，20%验证集
+# #
+# # evaluation(x_train, x_test, y_train, y_test, 'temp')
 
 # 创建新的特征并对比结果,暂时不用，特征数量非常多，对树类模型可能存在一定的效果
 # X_train, X_test = auto_feature_make(X_train, test, continue_list)
